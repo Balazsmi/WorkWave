@@ -7,20 +7,17 @@ public class random {
 
   public static void main(String[] args) {
     printList();
-    shouffle(list.length);
+    shouffle();
   }
 
   public static void printList() {
     System.out.println("List: " + Arrays.toString(list));
   }
 
-  public static void shouffle(int max) {
-    int random = (int)Math.floor(Math.random()*(max-0));
-    System.out.println(random);
-
+  public static void shouffle() {
 
     for (int i = 0; i < list.length; i++) {
-
+      System.out.println((int)Math.floor(Math.random() * (list.length + 1)));
     }
   }
 
