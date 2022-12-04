@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+
+
+
+body {
+    --background-color: rgb(20, 23, 24);
+    --accent-1: rgb(30, 32, 33);
+    --accent-2: rgb(40, 42, 44);
+    --yellow: rgb(236, 252, 199);
+    --blue: rgb(157, 193, 206);
+    --green: rgb(180, 255, 223);
+    --dark-green: rgb(129, 151, 139);
+    --pink: rgb(223, 142, 208);
+    --purple: rgb(151, 103, 247);
+    --beige: rgb(224, 222, 209);
+    --font: rgb(255, 255, 255);
+    --accent-font: rgb(137, 139, 139);
+    
+    background-color: var(--background-color);
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 10px;
+    left:10px;
+    right: 10px;
+    height: 60px;
+    border-radius: 20px;
+}
+
+
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    width: 50px;
+    border-radius: 12.5px;
+    left: 5px;
+}
+
+.bar1 {
+    position: relative;
+    display: flex;
+    color: white;
+    scale: 1.5;
+    justify-content: center;
+    align-items: center;
+    left: 5px;
+}
+
+.bar2 {
+    position: relative;
+    display: flex;
+    color: white;
+    scale: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-user {
+    position: absolute;
+    scale: 1.5;
+    color: white;
+    right: 22px;
+}
+
+nav {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;
+    left:10px;
+    right: 10px;
+    height: 80px;
+    background-color: var(--accent-2);
+    border-radius: 20px;
+}
+
+.overview {
+    position: absolute;
+    top:   100px;
+    left:  20px;
+    right: 20px;
+    height:180px;
+    background-color: var(--accent-1);
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: var(--beige);
+    border-style: solid;
+}
+
+.overview-heading {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--font);
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+#plus {
+    color: white;
+    scale: 1.5;
+    position: absolute;
+    right: 70px;
+}
+
+#home {
+    color: white;
+    scale: 1.5;
+    position: absolute;
+}
+
+#list {
+    color: white;
+    scale: 1.5;
+    position: absolute;
+    left: 70px;
+}
