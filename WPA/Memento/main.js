@@ -47,3 +47,8 @@ function year() {
      document.getElementById('week').style.backgroundColor  = 'transparent';
     document.getElementById('month').style.backgroundColor = 'transparent';
 }
+month();
+
+function add() {
+    alert('New Sub added')
+}

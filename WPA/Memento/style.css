@@ -134,6 +134,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: default;
+    
 }
 
 
@@ -223,7 +225,7 @@ nav {
     left: 20px !important;
     right: 20px !important;
 	padding: 25px 18px;
-    height: 100px !important;
+    height: 70px;
     top: 220px;
     resize: none;
     max-height: 100px;
@@ -235,7 +237,7 @@ nav {
     font-size: 17px;
     left: 20px;
     width: 70px;
-    top: 270px;
+    top: 240px;
 }
 
 .date-input {
@@ -250,7 +252,7 @@ nav {
     left: 20px !important;
 	padding: 25px 18px;
     height: 30px !important;
-    top: 430px;
+    top: 400px;
     resize: none;
     max-height: 100px;
 }
@@ -268,8 +270,8 @@ nav {
     position: absolute;
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
-    right: 177px;
-    top: 380px;
+    right: 115px;
+    top: 350px;
 }
 
 .price-input {
@@ -281,28 +283,28 @@ nav {
 	color: black;
 	border: 0;
 	outline: 0;
-    right: 112px;
+    right: 60px;
 	padding: 25px 18px;
     height: 30px;
-    top: 430px;
+    top: 400px;
     resize: none;
     max-height: 100px;
-    width: 70px;
+    width: 60px;
 }
 
 .dollar {
     position: absolute;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    right: 80px;
-    top: 435px;
+    right: 30px;
+    top: 405px;
 }
 
 .when {
     height: 75px;
     background-color: var(--white-accent);
     position: absolute;
-    top: 550px;
+    top: 500px;
     border-radius: 25px;
     left: 20px;
     right: 20px;
@@ -325,3 +327,16 @@ nav {
     top: 7.5px;
 }
 
+#add {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    right: 20px;
+    bottom: 20px;
+    top: 590px;
+    width: 150px;
+    border-radius: 30px;
+    border: none;
+    background-color: black;
+    color: var(--font);
+}
