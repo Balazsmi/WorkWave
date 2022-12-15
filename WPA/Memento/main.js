@@ -27,6 +27,19 @@ switch(pathname) {
 
 }
 
-function page2() {
 
+function week() {
+    document.getElementsByClassName("week").style.background  = "gray";
+    document.getElementsByClassName("month").style.background  = "transparent";
+    document.getElementsByClassName("year").style.background  = "transparent";
+}
+function month() {
+    document.getElementsByClassName("month").style.background  = "gray";
+    document.getElementsByClassName("week").style.background  = "transparent";
+    document.getElementsByClassName("year").style.background  = "transparent";
+}
+function year() {
+    document.getElementsByClassName("year").style.background  = "gray";
+    document.getElementsByClassName("week").style.background  = "transparent";
+    document.getElementsByClassName("month").style.background  = "transparent";
 }
