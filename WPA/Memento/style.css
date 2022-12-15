@@ -27,7 +27,7 @@ body::-webkit-scrollbar-track {
     background: var(--background-color);
 }
 body::-webkit-scrollbar-thumb {
-    background: var(--purple);
+    background: var(--font);
 }
 
 header {
@@ -185,6 +185,7 @@ nav {
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
     left: 20px;
+    width: 270px;
 }
 
 .title-input {
@@ -208,6 +209,7 @@ nav {
     font-size: 17px;
     left: 20px;
     top: 100px;
+    width: 270px;
 }
 
 .description-input {
@@ -233,6 +235,7 @@ nav {
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
     left: 20px;
+    width: 70px;
     top: 270px;
 }
 
