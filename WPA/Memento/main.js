@@ -27,19 +27,23 @@ switch(pathname) {
 
 }
 
+let when = 'monthly';
 
 function week() {
-    document.getElementsByClassName("week").style.background  = "gray";
-    document.getElementsByClassName("month").style.background  = "transparent";
-    document.getElementsByClassName("year").style.background  = "transparent";
+    when = 'weekly';
+     document.getElementById('week').style.backgroundColor  = '#e9e9e9';
+    document.getElementById('month').style.backgroundColor = 'transparent';
+     document.getElementById('year').style.backgroundColor  = 'transparent';
 }
 function month() {
-    document.getElementsByClassName("month").style.background  = "gray";
-    document.getElementsByClassName("week").style.background  = "transparent";
-    document.getElementsByClassName("year").style.background  = "transparent";
+    when = 'monthly';
+    document.getElementById('month').style.backgroundColor = '#e9e9e9';
+     document.getElementById('week').style.backgroundColor  = 'transparent';
+     document.getElementById('year').style.backgroundColor  = 'transparent';
 }
 function year() {
-    document.getElementsByClassName("year").style.background  = "gray";
-    document.getElementsByClassName("week").style.background  = "transparent";
-    document.getElementsByClassName("month").style.background  = "transparent";
+    when = 'yearly';
+     document.getElementById('year').style.backgroundColor  = '#e9e9e9';
+     document.getElementById('week').style.backgroundColor  = 'transparent';
+    document.getElementById('month').style.backgroundColor = 'transparent';
 }

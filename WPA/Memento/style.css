@@ -88,7 +88,6 @@ nav {
     width: 100%;
     height: 75px;
     background-color: black;
-
 }
 
 .overview {
@@ -313,7 +312,7 @@ nav {
     padding-right: 30px;
 }
 
-.week, .month, .year {
+#week, #month, #year {
     position: relative;
     border-style: none;
     font-family: 'Nunito', sans-serif;
@@ -321,7 +320,7 @@ nav {
     color: gray;
     background-color: transparent;
     height: 60px;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 100px;
     top: 7.5px;
 }
