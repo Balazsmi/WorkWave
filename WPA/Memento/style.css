@@ -1,26 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 
 
 body {
-    --background-color: rgb(20, 23, 24);
-    --accent-1: rgb(30, 32, 33);
-    --accent-2: rgb(40, 42, 44);
+    --background-color: rgb(22, 22, 22);
+    --accent-1: rgb(34, 34, 34);
+    --accent-2: rgb(51, 51, 51);
     --yellow: rgb(236, 252, 199);
     --blue: rgb(157, 193, 206);
-    --green: rgb(180, 255, 223);
+    --green: rgb(128, 172, 128);
     --dark-green: rgb(129, 151, 139);
     --pink: rgb(223, 142, 208);
     --purple: rgb(151, 103, 247);
     --beige: rgb(224, 222, 209);
     --font: rgb(255, 255, 255);
     --accent-font: rgb(137, 139, 139);
-    
-    background-color: var(--background-color);
+    --white-accent: rgb(246, 246, 246);
+    background-color: black;
     margin: 0px;
     padding: 0px;
+}
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--purple);
 }
 
 header {
@@ -78,12 +86,10 @@ nav {
     align-items: center;
     justify-content: center;
     bottom: 0px;
-    left:0px;
-    right: 0px;
-    height: 90px;
-    background-color: var(--accent-2);
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
+    width: 100%;
+    height: 75px;
+    background-color: black;
+
 }
 
 .overview {
@@ -95,8 +101,6 @@ nav {
     background-color: var(--accent-1);
     border-radius: 20px;
     border-width: 2px;
-    border-color: var(--beige);
-    border-style: solid;
 }
 
 .overview-heading {
@@ -108,20 +112,187 @@ nav {
 
 #plus {
     color: white;
-    scale: 1.5;
     position: absolute;
     right: 70px;
 }
 
 #home {
     color: white;
-    scale: 1.5;
     position: absolute;
 }
 
 #list {
     color: white;
-    scale: 1.5;
     position: absolute;
     left: 70px;
+}
+
+
+#plus, #home, #list {
+    scale: 1.75;
+    color: rgb(196, 196, 196);
+    border-style: none;
+    text-decoration:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#menu {
+    z-index: -10;
+    position: absolute;
+    top:   55px;
+    left:  0px;
+    right: 0px;
+    bottom: 5px;
+    background-color: var(--background-color);
+    border-radius: 35px;
+}
+
+.create-title {
+    position: relative;
+    z-index: 20;
+    top: -60px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--font);
+    font-size: 25px;
+    margin-left: 20px;
+    left: calc(50% - width);
+
+}
+
+.heading-new-task {
+    height: 20px;
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new {
+    position: absolute;
+    top:   80px;
+    left:  0px;
+    right: 0px;
+    bottom: 75px;
+    background-color: var(--font);
+    border-radius: 35px;
+}
+
+.title {
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    left: 20px;
+}
+
+.title-input {
+    position: absolute;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 18px;
+	background: var(--white-accent);
+    border-radius: 20px;
+	color: black;
+	border: 0;
+	outline: 0;
+    left: 20px;
+    right: 20px;
+	padding: 25px 18px;
+}
+
+
+.description {
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    left: 20px;
+    top: 100px;
+}
+
+.description-input {
+    position: absolute;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 18px;
+	background: var(--white-accent);
+    border-radius: 20px;
+	color: black;
+	border: 0;
+	outline: 0;
+    left: 20px !important;
+    right: 20px !important;
+	padding: 25px 18px;
+    height: 100px !important;
+    top: 220px;
+    resize: none;
+    max-height: 100px;
+}
+
+.date {
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    left: 20px;
+    top: 270px;
+}
+
+.date-input {
+    position: absolute;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 18px;
+	background: var(--white-accent);
+    border-radius: 20px;
+	color: black;
+	border: 0;
+	outline: 0;
+    left: 20px !important;
+	padding: 25px 18px;
+    height: 30px !important;
+    top: 430px;
+    resize: none;
+    max-height: 100px;
+}
+::-moz-selection {
+    background: black;
+    color: white;
+}
+  
+::selection {
+    background: black;
+    color: white;
+}
+
+.price {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    right: 177px;
+    top: 380px;
+}
+
+.price-input {
+    position: absolute;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 18px;
+	background: var(--white-accent);
+    border-radius: 20px;
+	color: black;
+	border: 0;
+	outline: 0;
+    right: 90px;
+	padding: 25px 18px;
+    height: 30px;
+    top: 430px;
+    resize: none;
+    max-height: 100px;
+    width: 90px;
+}
+
+.dollar {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    right: 55px;
+    top: 438.5px;
 }
