@@ -55,11 +55,8 @@ function getWhen() {
 }
 
 
-
-
-localStorage.clear();
 function add() {
-    let y = getWhen();
+    console.log(document.getElementById('title-input').value)
     let sub1 = {
         title: document.getElementById('title-input').value,
         description: document.getElementById('description-input').value,
@@ -67,7 +64,12 @@ function add() {
         price: document.getElementById('price-input').value,
         when: getWhen()
     }
-    localStorage.setItem('sub1', JSON.stringify(sub1));
 
+    if(document.getElementById('title-input').value !== "" && document.getElementById('date-input').value !== "" && document.getElementById('price-input').value !== ""){
+        localStorage.setItem('sub1', JSON.stringify(sub1));
+        subCounter();
+        console.log(counter)
+        //window.location = "home.html";
+    }
 }
 
