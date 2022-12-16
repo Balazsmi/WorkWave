@@ -355,6 +355,7 @@ nav {
 #home-icon, #plus-icon, #list-icon {
     height: 20px;
     user-select: none;
+    cursor: pointer;
 }
 
 #menu-icon {
@@ -406,3 +407,4 @@ nav {
     left: 71px;
     visibility: hidden;
 }
+
