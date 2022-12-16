@@ -54,21 +54,31 @@ function getWhen() {
     return when;
 }
 
+function Sub(title, description, date, price, when) {
+    this.title = title;
+    this.description = description;
+    this.date = date;
+    this.price = price;
+    this.when = when;
+  }
+
 
 function add() {
-    console.log(document.getElementById('title-input').value)
-    let sub1 = {
-        title: document.getElementById('title-input').value,
-        description: document.getElementById('description-input').value,
-        date: document.getElementById('date-input').value,
-        price: document.getElementById('price-input').value,
-        when: getWhen()
-    }
+    //create a new Subscription object
+    const sub1 = new Sub(document.getElementById('title-input').value,
+    document.getElementById('description-input').value,
+    document.getElementById('date-input').value,
+    document.getElementById('price-input').value,
+    getWhen())
 
-    if(document.getElementById('title-input').value !== "" && document.getElementById('date-input').value !== "" && document.getElementById('price-input').value !== ""){
+    //check if input is empty
+    if(sub1.title !== "" && sub1.date !== "" && sub1.price !== ""){
         localStorage.setItem('sub1', JSON.stringify(sub1));
-        subCounter();
-        console.log(counter)
+        document.getElementById('title-input').value = "";
+        document.getElementById('description-input').value = "";
+        document.getElementById('date-input').value = "";
+        document.getElementById('price-input').value = "";
+        month()
         //window.location = "home.html";
     }
 }

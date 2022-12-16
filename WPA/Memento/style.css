@@ -333,11 +333,19 @@ nav {
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     right: 20px;
-    bottom: 20px;
+    z-index: 6;
+    bottom: 35px;
     top: 590px;
     width: 150px;
-    border-radius: 30px;
-    border: none;
-    background-color: black;
+    border-width: 0px;
+    border-radius: 20px;
+    background-color: var(--accent-2);
     color: var(--font);
+    box-shadow: 0 15px var(--accent-1);
+    max-height: 250px;
+}
+
+#add:active {
+    box-shadow: 0 5px var(--accent-1);
+    transform: translateY(10px);
 }
