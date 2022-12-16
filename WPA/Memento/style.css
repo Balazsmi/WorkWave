@@ -50,7 +50,8 @@ header {
     height: 50px;
     width: 50px;
     border-radius: 12.5px;
-    left: 5px;
+    left: 0px;
+    top: -5px;
 }
 
 .bar1 {
@@ -76,7 +77,8 @@ header {
     position: absolute;
     scale: 1.5;
     color: white;
-    right: 22px;
+    right: 15px;
+    margin-top: -15px;
 }
 
 nav {
@@ -86,7 +88,7 @@ nav {
     justify-content: center;
     bottom: 0px;
     width: 100%;
-    height: 75px;
+    height: 65px;
     background-color: black;
 }
 
@@ -95,7 +97,7 @@ nav {
     top:   100px;
     left:  20px;
     right: 20px;
-    height:180px;
+    bottom: 450px;
     background-color: var(--accent-1);
     border-radius: 20px;
     border-width: 2px;
@@ -127,7 +129,7 @@ nav {
 
 
 #plus, #home, #list {
-    scale: 1.75;
+    scale: 1.5;
     color: rgb(196, 196, 196);
     border-style: none;
     text-decoration:none;
@@ -142,10 +144,10 @@ nav {
 #menu {
     z-index: -10;
     position: absolute;
-    top:   55px;
+    top:   50px;
     left:  0px;
     right: 0px;
-    bottom: 5px;
+    bottom: 65px;
     background-color: var(--background-color);
     border-radius: 35px;
 }
@@ -159,7 +161,6 @@ nav {
     font-size: 25px;
     margin-left: 20px;
     left: calc(50% - width);
-
 }
 
 .heading-new-task {
@@ -176,12 +177,12 @@ nav {
     top:   80px;
     left:  0px;
     right: 0px;
-    bottom: 75px;
+    bottom: 65px;
     background-color: var(--font);
     border-radius: 35px;
 }
 
-.title {
+#title {
     position: relative;
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
@@ -189,7 +190,7 @@ nav {
     width: 270px;
 }
 
-.title-input {
+#title-input {
     position: absolute;
     font-family: 'Nunito', sans-serif !important;
     font-size: 18px;
@@ -213,7 +214,7 @@ nav {
     width: 270px;
 }
 
-.description-input {
+#description-input {
     position: absolute;
     font-family: 'Nunito', sans-serif !important;
     font-size: 18px;
@@ -240,7 +241,7 @@ nav {
     top: 240px;
 }
 
-.date-input {
+#date-input {
     position: absolute;
     font-family: 'Nunito', sans-serif !important;
     font-size: 18px;
@@ -274,7 +275,7 @@ nav {
     top: 350px;
 }
 
-.price-input {
+#price-input {
     position: absolute;
     font-family: 'Nunito', sans-serif !important;
     font-size: 18px;

@@ -49,6 +49,31 @@ function year() {
 }
 month();
 
-function add() {
-    alert('New Sub added')
+
+function getWhen() {
+    let when;
+    if (document.getElementById('week').style.backgroundColor === '#e9e9e9') {
+        return "week";
+    } else if (document.getElementById('month').style.backgroundColor === '#e9e9e9') {
+        return "month";
+    } else if (document.getElementById('year').style.backgroundColor === '#e9e9e9') {
+        return "year";
+    }
 }
+
+
+let sub1 = {
+    title: document.getElementById('title-input').value,
+    description: document.getElementById('description-input').value,
+    date: document.getElementById('date-input').value,
+    price: document.getElementById('price-input').value,
+    when: getWhen()
+}
+  
+console.log(JSON.stringify(sub1));
+
+localStorage.clear();
+function add() {
+    localStorage.setItem('sub1', JSON.stringify(sub1));
+}
+
