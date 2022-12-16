@@ -14,25 +14,17 @@
     
     
     <header>
-
-        <div class="menu">
-            <i class="bar1 fas fa-minus"></i>
-            <i class="bar2 fas fa-minus"></i>
-
-        </div>
-
-
-        <i class="fa-regular fa-user"></i>
-
-
-        
+        <img id="menu-icon" src="menu-icon.png">
+        <img id="profile-icon" src="profile-icon.png">
     </header>
 
 
 
-    <menu id="menu">
-        
-    </menu>
+    <div class="new">
+        <div class="heading-new-task">
+            <p class="create-title">Home</p> 
+        </div>
+    </div>
 
 
     <div class="overview">
@@ -41,9 +33,11 @@
     </div>
 
     <nav>
-        <a href="plus.html" id="plus"  onclick="page(), plus()" class="fas fa-plus-circle"></a>
-        <a href="home.html" id="home"  onclick="page(), home()" class="fa-solid fa-house"></a>
-        <a href="list.html" id="list"  onclick="page(), list()" class="fa-solid fa-list"></a>
+        <a href="plus.html" id="plus"  onclick="page(), plus()"><img id="plus-icon" src="plus-icon.png"></a>
+        <a href="home.html" id="home"  onclick="page(), home()"><img id="home-icon" src="home-icon.png"></a>
+        <a href="list.html" id="list"  onclick="page(), list()"><img id="list-icon" src="list-icon.png"></a>
+
+        <div id="indicator-home"></div>
     </nav>
 
 
