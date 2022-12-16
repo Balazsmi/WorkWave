@@ -47,9 +47,13 @@
     </div>
 
     <nav>
-        <a href="plus.html" id="plus"  onclick="plus()"><img id="plus-icon" src="plus-icon.png" onclick=""></a>
-        <a href="home.html" id="home"  onclick="home()"><img id="home-icon" src="home-icon.png" onclick="document.getElementById('indicator').style.right = '71px'"></a>
-        <a href="list.html" id="list"  onclick="list()"><img id="list-icon" src="list-icon.png" onclick="document.getElementById('indicator').style.left = '71px'"></a>
+        <a href="plus.html" id="plus"  onclick="page(), plus()"><img id="plus-icon" src="plus-icon.png"></a>
+        <a href="home.html" id="home"  onclick="page(), home()"><img id="home-icon" src="home-icon.png"></a>
+        <a href="list.html" id="list"  onclick="page(), list()"><img id="list-icon" src="list-icon.png"></a>
+
+        <div id="indicator-home"></div>
+        <div id="indicator-list"></div>
+        <div id="indicator-plus"></div>
     </nav>
     
 

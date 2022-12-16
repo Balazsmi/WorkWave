@@ -16,13 +16,13 @@ function plus() {
 var pathname = window.location.pathname;
 switch(pathname) {
     case "/WPA/Memento/home.html" :
-        document.getElementById("indicator-home").style.background = "visible";
+        document.getElementById("indicator-home").style.visibility = "visible";
         break;
     case "/WPA/Memento/list.html" :
         document.getElementById("indicator-list").style.visibility = "visible";
         break;
     case "/WPA/Memento/plus.html" :
-        document.getElementById("indicator-plus").style.color = "visible";
+        document.getElementById("indicator-plus").style.visibility = "visible";
         break;
 
 }

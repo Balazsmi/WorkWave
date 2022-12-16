@@ -372,7 +372,7 @@ nav {
     right: 10px;
 }
 
-#indicator {
+#indicator-home {
     height: 4px;
     z-index: 50;
     width: 18px;
@@ -383,3 +383,26 @@ nav {
     visibility: hidden;
 }
 
+#indicator-plus {
+    height: 4px;
+    z-index: 50;
+    width: 18px;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 50px;
+    right: 71px;
+    visibility: hidden;
+}
+
+#indicator-list {
+    height: 4px;
+    z-index: 50;
+    width: 18px;
+    background-color: white;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 50px;
+    left: 71px;
+    visibility: hidden;
+}
