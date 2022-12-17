@@ -1,31 +1,33 @@
 
 function list() {
-
+    document.getElementById("indicator-list").style.visibility = "visible";
+    document.getElementById("indicator-home").style.visibility = "hidden";
+    document.getElementById("indicator-plus").style.visibility = "hidden";
+    document.getElementById("plus-div").style.visibility = "hidden";
+    document.getElementById("home-div").style.visibility = "hidden";
+    document.getElementById("list-div").style.visibility = "visible";
 }
 
 function home() {
-
+    document.getElementById("indicator-home").style.visibility = "visible";
+    document.getElementById("indicator-plus").style.visibility = "hidden";
+    document.getElementById("indicator-list").style.visibility = "hidden";
+    document.getElementById("plus-div").style.visibility = "hidden";
+    document.getElementById("home-div").style.visibility = "visible";
+    document.getElementById("list-div").style.visibility = "hidden";
 }
 
 function plus() {
-    
+    document.getElementById("indicator-plus").style.visibility = "visible";
+    document.getElementById("indicator-list").style.visibility = "hidden";
+    document.getElementById("indicator-home").style.visibility = "hidden";
+    document.getElementById("plus-div").style.visibility = "visible";
+    document.getElementById("home-div").style.visibility = "hidden";
+    document.getElementById("list-div").style.visibility = "hidden";
 }
 
 
 
-var pathname = window.location.pathname;
-switch(pathname) {
-    case "/WPA/Memento/home.html" :
-        document.getElementById("indicator-home").style.visibility = "visible";
-        break;
-    case "/WPA/Memento/list.html" :
-        document.getElementById("indicator-list").style.visibility = "visible";
-        break;
-    case "/WPA/Memento/plus.html" :
-        document.getElementById("indicator-plus").style.visibility = "visible";
-        break;
-
-}
 
 let when = 'monthly';
 
@@ -70,9 +72,9 @@ function Sub(title, description, date, price, when) {
     this.date = date;
     this.price = price;
     this.when = when;
-  }
+}
 
-document.getElementById('list-sub-1').innerHTML  = "sub1.title";
+
 function add() {
     
     //create a new Subscription object

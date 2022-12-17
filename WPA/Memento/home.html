@@ -16,34 +16,95 @@
     <header>
         <img id="menu-icon" src="menu-icon.png">
         <img id="profile-icon" src="profile-icon.png">
-    </header>
+    </header>    
 
+    <div id="home-div">
 
-
-    <div class="new">
-        <div class="heading-new-task">
-            <p class="create-title">Home</p> 
+        <div class="new">
+            <div class="heading-new-task">
+                <p class="create-title">Home</p> 
+            </div>
+        </div>
+    
+    
+        <div class="overview">
+    
+            <h1 class="overview-heading">Overview:</h1>
         </div>
     </div>
 
 
-    <div class="overview">
 
-        <h1 class="overview-heading">Overview:</h1>
+
+
+
+    <div id="list-div">
+
+
+        <div class="new">
+            <div class="heading-new-task">
+                <p class="create-title">All Subscription</p> 
+            </div>
+        </div>
+    
+        <p id="list-sub-1"><label id="price-tag">12$</label></p>
+        
+        <script src="main.js"></script>
     </div>
 
-    <nav>
-        <a href="plus.html" id="plus"  onclick="page(), plus()"><img id="plus-icon" src="plus-icon.png"></a>
-        <a href="home.html" id="home"  onclick="page(), home()"><img id="home-icon" src="home-icon.png"></a>
-        <a href="list.html" id="list"  onclick="page(), list()"><img id="list-icon" src="list-icon.png"></a>
+
+
+
+
+
+
+
+    <div id="plus-div">
+        <div class="heading-new-task">
+            <p class="create-title">Add Subscription</p> 
+        </div>
+
+        <div>
+            <p id="title">Subscription Title</p>
+            <input type="text"  id="title-input" placeholder="Enter Title">
+        </div>
+        <div>
+            <p id="description">Description (Optional)</p>
+            <textarea max-length="150" type="text" id="description-input" placeholder="Enter Subscription Description"></textarea>
+        </div>
+        <div>
+            <p id="date">Date</p>
+            <input type="date" id="date-input">
+        </div>
+        <div>
+            <p id="price">Price</p>
+            <input type="number" id="price-input">
+            <p id="dollar">$</p>
+        </div>
+        <div id="when">
+            <button onclick="week()" id="week">weekly</button>
+            <button onclick="month()" id="month">monthly</button>
+            <button onclick="year()" id="year">yearly</button>
+        </div>
+        <div>
+            <button onclick="add()" id="add">Add New</button>
+        </div>
+
+        
+    </div>
+
+
+
+
+    <nav id="nav-div">
+        <a id="plus"  onclick="plus()"><img id="plus-icon" src="plus-icon.png"></a>
+        <a id="home"  onclick="home()"><img id="home-icon" src="home-icon.png"></a>
+        <a id="list"  onclick="list()"><img id="list-icon" src="list-icon.png"></a>
 
         <div id="indicator-home"></div>
         <div id="indicator-list"></div>
         <div id="indicator-plus"></div>
     </nav>
-
-
-
 
     <script src="main.js"></script>
 </body>
