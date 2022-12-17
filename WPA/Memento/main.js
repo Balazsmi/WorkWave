@@ -87,11 +87,12 @@ function add() {
     //check if input is empty
     if(sub1.title !== "" && sub1.date !== "" && sub1.price !== ""){
         localStorage.setItem('sub1', JSON.stringify(sub1));
+        document.getElementById("list-sub-1").innerHTML = sub1.title;
+        document.getElementById("price-tag").innerHTML = sub1.price + " $";
         document.getElementById('title-input').value = "";
         document.getElementById('description-input').value = "";
         document.getElementById('date-input').value = "";
         document.getElementById('price-input').value = "";
-        
         month()
 
         //window.location = "home.html";

@@ -142,6 +142,7 @@ nav {
     left: 20px;
     width: 270px;
     font-weight: 800;
+    top: -15px
 }
 
 #title-input {
@@ -156,6 +157,7 @@ nav {
     left: 20px;
     right: 20px;
 	padding: 25px 18px;
+    top: 145px;
 }
 
 
@@ -164,7 +166,7 @@ nav {
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
     left: 20px;
-    top: 100px;
+    top: 70px;
     width: 270px;
     font-weight: 800;
 }
@@ -182,7 +184,7 @@ nav {
     right: 20px !important;
 	padding: 25px 18px;
     height: 70px;
-    top: 220px;
+    top: 270px;
     resize: none;
     max-height: 100px;
 }
@@ -197,6 +199,15 @@ nav {
     font-weight: 800;
 }
 
+#date {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    right: 115px;
+    top: 390px;
+    font-weight: 800;
+}
+
 #date-input {
     position: absolute;
     font-family: 'Nunito', sans-serif !important;
@@ -208,12 +219,11 @@ nav {
 	outline: 0;
     left: 20px !important;
 	padding: 25px 18px;
-    height: 30px !important;
-    top: 400px;
-    resize: none;
-    max-height: 100px;
-
+    height: 15px !important;
+    top: 440px;
 }
+
+
 ::-moz-selection {
     background: black;
     color: white;
@@ -229,7 +239,7 @@ nav {
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
     right: 115px;
-    top: 350px;
+    top: 390px;
     font-weight: 800;
 }
 
@@ -244,8 +254,8 @@ nav {
 	outline: 0;
     right: 60px;
 	padding: 25px 18px;
-    height: 30px;
-    top: 400px;
+    height: 15px;
+    top: 440px;
     resize: none;
     max-height: 100px;
     width: 60px;
@@ -257,14 +267,14 @@ nav {
     font-size: 20px;
     font-weight: 800;
     right: 30px;
-    top: 405px;
+    top: 440px;
 }
 
 #when {
-    height: 75px;
+    height: 50px;
     background-color: var(--blue);
     position: absolute;
-    top: 500px;
+    top: 520px;
     border-radius: 25px;
     left: 20px;
     right: 20px;
@@ -281,10 +291,10 @@ nav {
     font-size: 17.5px;
     color: gray;
     background-color: transparent;
-    height: 60px;
-    border-radius: 15px;
+    height: 40px;
+    border-radius: 50px;
     width: 100px;
-    top: 7.5px;
+    top: 5px;
     font-weight: 800;
     cursor: pointer;
 }
@@ -296,14 +306,13 @@ nav {
     font-size: 20px;
     right: 20px;
     z-index: 6;
-    bottom: 35px;
+    bottom: 90px;
     top: 590px;
     width: 150px;
     border-width: 0px;
     border-radius: 30px;
     background-color: var(--yellow);
     color: black;
-
     max-height: 250px;
     font-weight: 1000;
 }
@@ -383,7 +392,7 @@ nav {
     position: absolute;
     bottom: 10px;
     border-radius: 50px;
-    visibility: hidden;
+    visibility: visible;
 }
 
 #indicator-plus {
@@ -420,5 +429,6 @@ nav {
 }
 
 #home-div {
-    visibility: hidden;
+    visibility: visible;
 }
+
