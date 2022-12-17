@@ -31,22 +31,31 @@ let when = 'monthly';
 
 function week() {
     when = 'weekly';
-     document.getElementById('week').style.color = 'black';
+     document.getElementById('week').style.color = 'white';
      document.getElementById('month').style.color = 'gray';
      document.getElementById('year').style.color = 'gray';
+     document.getElementById('week').style.background =  'rgba(51, 51, 51, 0.486)';
+     document.getElementById('month').style.background = 'transparent';
+     document.getElementById('year').style.background =  'transparent';
 
 }
 function month() {
     when = 'monthly';
-    document.getElementById('month').style.color = 'black';
+    document.getElementById('month').style.color = 'white';
     document.getElementById('week').style.color = 'gray';
     document.getElementById('year').style.color = 'gray';
+    document.getElementById('month').style.background = 'rgba(51, 51, 51, 0.486)';
+    document.getElementById('week').style.background =  'transparent';
+    document.getElementById('year').style.background =  'transparent';
 }
 function year() {
     when = 'yearly';
-     document.getElementById('year').style.color = 'black';
+     document.getElementById('year').style.color = 'white';
      document.getElementById('month').style.color = 'gray';
      document.getElementById('week').style.color = 'gray';
+     document.getElementById('year').style.background =  'rgba(51, 51, 51, 0.486)';
+     document.getElementById('week').style.background =  'transparent';
+     document.getElementById('month').style.background = 'transparent';
 }
 month();
 
@@ -63,8 +72,9 @@ function Sub(title, description, date, price, when) {
     this.when = when;
   }
 
-
+document.getElementById('list-sub-1').innerHTML  = "sub1.title";
 function add() {
+    
     //create a new Subscription object
     const sub1 = new Sub(document.getElementById('title-input').value,
     document.getElementById('description-input').value,
@@ -79,7 +89,9 @@ function add() {
         document.getElementById('description-input').value = "";
         document.getElementById('date-input').value = "";
         document.getElementById('price-input').value = "";
+        
         month()
+
         //window.location = "home.html";
     }
 }
