@@ -358,7 +358,8 @@ nav {
     justify-content: center;
     align-items: center;
     font-weight: 1000;
-    right: 100px;
+    left: 275px;
+    top: 325px;
     color: black;
 }
 
@@ -432,3 +433,10 @@ nav {
     visibility: visible;
 }
 
+
+
+#gradient {
+    margin-bottom: 100px;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);;
+}

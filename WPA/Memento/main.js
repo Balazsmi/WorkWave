@@ -18,6 +18,7 @@ function home() {
 }
 
 function plus() {
+    month()
     document.getElementById("indicator-plus").style.visibility = "visible";
     document.getElementById("indicator-list").style.visibility = "hidden";
     document.getElementById("indicator-home").style.visibility = "hidden";
@@ -29,7 +30,7 @@ function plus() {
 
 
 
-let when = 'monthly';
+
 
 function week() {
     when = 'weekly';
@@ -59,7 +60,7 @@ function year() {
      document.getElementById('week').style.background =  'transparent';
      document.getElementById('month').style.background = 'transparent';
 }
-month();
+
 
 
 function getWhen() {
@@ -74,28 +75,30 @@ function Sub(title, description, date, price, when) {
     this.when = when;
 }
 
+function clear() {
+    document.getElementById('title-input').value = "";
+    document.getElementById('description-input').value = "";
+    document.getElementById('date-input').value = "";
+    document.getElementById('price-input').value = "";
+}
 
 function add() {
-    
-    //create a new Subscription object
-    const sub1 = new Sub(document.getElementById('title-input').value,
-    document.getElementById('description-input').value,
-    document.getElementById('date-input').value,
-    document.getElementById('price-input').value,
-    getWhen())
+
+    let sub1 = new Sub(
+        document.getElementById('title-input').value,
+        document.getElementById('description-input').value,
+        document.getElementById('date-input').value,
+        document.getElementById('price-input').value,
+        getWhen())
 
     //check if input is empty
     if(sub1.title !== "" && sub1.date !== "" && sub1.price !== ""){
+        
         localStorage.setItem('sub1', JSON.stringify(sub1));
         document.getElementById("list-sub-1").innerHTML = sub1.title;
-        document.getElementById("price-tag").innerHTML = sub1.price + " $";
-        document.getElementById('title-input').value = "";
-        document.getElementById('description-input').value = "";
-        document.getElementById('date-input').value = "";
-        document.getElementById('price-input').value = "";
-        month()
+        document.getElementById("price-tag").innerHTML = sub1.price + ' $';
+        clear();
 
-        //window.location = "home.html";
     }
 }
 
