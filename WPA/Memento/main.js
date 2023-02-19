@@ -1,8 +1,5 @@
 
 function list() {
-    document.getElementById("indicator-list").style.visibility = "visible";
-    document.getElementById("indicator-home").style.visibility = "hidden";
-    document.getElementById("indicator-plus").style.visibility = "hidden";
     document.getElementById("plus-div").style.visibility = "hidden";
     document.getElementById("home-div").style.visibility = "hidden";
     document.getElementById("list-div").style.visibility = "visible";
@@ -12,9 +9,6 @@ function list() {
 }
 
 function home() {
-    document.getElementById("indicator-home").style.visibility = "visible";
-    document.getElementById("indicator-plus").style.visibility = "hidden";
-    document.getElementById("indicator-list").style.visibility = "hidden";
     document.getElementById("plus-div").style.visibility = "hidden";
     document.getElementById("home-div").style.visibility = "visible";
     document.getElementById("list-div").style.visibility = "hidden";
@@ -25,9 +19,6 @@ function home() {
 
 function plus() {
     month()
-    document.getElementById("indicator-plus").style.visibility = "visible";
-    document.getElementById("indicator-list").style.visibility = "hidden";
-    document.getElementById("indicator-home").style.visibility = "hidden";
     document.getElementById("plus-div").style.visibility = "visible";
     document.getElementById("home-div").style.visibility = "hidden";
     document.getElementById("list-div").style.visibility = "hidden";

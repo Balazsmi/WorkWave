@@ -9,12 +9,14 @@ body {
     --accent-1: rgb(30, 32, 33);
     --accent-2: rgb(40, 42, 44);
     --accent-3: rgb(44, 46, 48);
-    --yellow: rgb(253, 244, 133);
+    --yellow: #f9f5c6;
+    --yellow-accent: #d1cda0;
     --blue: rgb(180, 255, 223);
+    --dark-blue: #343b43;
     --green: rgb(128, 172, 128);
     --dark-green: rgb(129, 151, 139);
-    --pink: rgb(223, 142, 208);
-    --purple: rgb(151, 103, 247);
+    --pink: #f3e3e3;
+    --purple: #e9f1fb;
     --beige: rgb(224, 222, 209);
     --font: rgb(255, 255, 255);
     --accent-font: rgb(137, 139, 139);
@@ -326,7 +328,7 @@ nav {
 }
 
 #add:active {
-    background-color: rgb(226, 218, 129);
+    background-color: var(--yellow-accent);
 }
 
 #title, #description, #price, #date, #dollar {
