@@ -1,0 +1,43 @@
+/* CSS */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#newtask {
+  display: flex;
+  align-items: center;
+}
+
+#newtask input {
+  flex: 1;
+  padding: 10px;
+}
+
+#newtask button {
+  padding: 10px;
+}
+
+#tasks ul {
+  list-style-type: none;
+}
+
+#tasks li {
+  display: flex;
+  align-items: center;
+}
+
+#tasks li.done span {
+   text-decoration: line-through; 
+   color: gray; 
+}
+
+#tasks li button {
+   margin-left: auto; 
+}

@@ -1,6 +1,6 @@
 package Java.Random;
 import java.util.*;
-public class Test {
+public class Testing {
     public static void main(String[] args) {
         reverse(5);
     }

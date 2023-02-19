@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWA Application</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <a href="#" onclick="show('list');"><i class="fas fa-list"></i></a>
+    <a href="#" onclick="show('home');"><i class="fas fa-home"></i></a>
+    <a href="#" onclick="show('create');"><i class="fas fa-plus"></i></a>
+  </nav>
+  <div id="list" class="content active">
+    <h1>List Page</h1>
+    <p>This is the list page content.</p>
+  </div>
+  <div id="home" class="content">
+    <h1>Home Page</h1>
+    <p>This is the home page content.</p>
+  </div>
+  <div id="create" class="content">
+    <h1>Create Page</h1>
+    <p>This is the create page content.</p>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
