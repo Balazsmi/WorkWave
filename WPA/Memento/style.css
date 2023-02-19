@@ -281,14 +281,14 @@ nav {
     height: 50px;
     background-color: var(--blue);
     position: relative;
-    border-radius: 25px;
+    border-radius: 20px;
     display:flex;
     justify-content:space-between;
     padding-left: 30px;
     padding-right: 30px;
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 90px;
+    margin-top: 95px;
 }
 
 #week, #month, #year {
@@ -307,24 +307,22 @@ nav {
     user-select: none;
 }
 
-#add-div {
-    position: relative;
+#add {
+    position: absolute;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
-    width: 100%;
     margin-top: 15px;
     border-width: 0px;
     border-radius: 30px;
     background-color: var(--yellow);
     color: black;
     height: 100px;
+    width: 150px;
     font-weight: 1000;
     display: flex;
+    align-items: center;
     justify-content: center;
-}
-
-#add {
-    
+    right: 20px;
 }
 
 #add:active {

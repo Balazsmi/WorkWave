@@ -6,6 +6,9 @@ function list() {
     document.getElementById("plus-div").style.visibility = "hidden";
     document.getElementById("home-div").style.visibility = "hidden";
     document.getElementById("list-div").style.visibility = "visible";
+    document.getElementById("home-icon").style.opacity = "50%";
+    document.getElementById("plus-icon").style.opacity = "50%";
+    document.getElementById("list-icon").style.opacity = "100%";
 }
 
 function home() {
@@ -15,6 +18,9 @@ function home() {
     document.getElementById("plus-div").style.visibility = "hidden";
     document.getElementById("home-div").style.visibility = "visible";
     document.getElementById("list-div").style.visibility = "hidden";
+    document.getElementById("list-icon").style.opacity = "50%";
+    document.getElementById("plus-icon").style.opacity = "50%";
+    document.getElementById("home-icon").style.opacity = "100%";
 }
 
 function plus() {
@@ -25,6 +31,9 @@ function plus() {
     document.getElementById("plus-div").style.visibility = "visible";
     document.getElementById("home-div").style.visibility = "hidden";
     document.getElementById("list-div").style.visibility = "hidden";
+    document.getElementById("list-icon").style.opacity = "50%";
+    document.getElementById("home-icon").style.opacity = "50%";
+    document.getElementById("plus-icon").style.opacity = "100%";
 }
 
 
