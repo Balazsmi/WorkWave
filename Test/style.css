@@ -1,43 +1,87 @@
-/* CSS */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
 }
 
-.container {
-  width: 500px;
-  margin: 0 auto;
+h1 {
+  font-size: 36px;
+  margin: 30px 0;
 }
 
-#newtask {
-  display: flex;
-  align-items: center;
-}
-
-#newtask input {
-  flex: 1;
+input[type="text"] {
+  font-size: 16px;
   padding: 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 60%;
+  background-color: #1E1E1E;
+  color: #fff;
 }
 
-#newtask button {
-  padding: 10px;
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
 }
 
-#tasks ul {
+button:hover {
+  background-color: #3e8e41;
+}
+
+ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-#tasks li {
+li {
+  font-size: 24px;
+  padding: 10px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #ddd;
 }
 
-#tasks li.done span {
-   text-decoration: line-through; 
-   color: gray; 
+li:last-child {
+  border-bottom: none;
 }
 
-#tasks li button {
-   margin-left: auto; 
+.completed {
+  text-decoration: line-through;
+}
+
+input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.deleteTodo {
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteTodo:hover {
+  background-color: #da190b;
+}
+
+.darkmode {
+  background-color: #121212;
+  color: #fff;
+}
+
+.darkmode input[type="text"] {
+  background-color: #1E1E1E;
+  color: #fff;
 }

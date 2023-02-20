@@ -8,3 +8,6 @@ body {
   height: 35px;
 }
 
+#nav-ul {
+  list-style-type: none;
+}
