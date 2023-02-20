@@ -26,9 +26,13 @@ export default function App() {
 
       <View style={{
         backgroundColor: 'gray',
-        height: 100,
-        width: 300,
+        top: 75,
+        height: 200,
+        width: "100%",
         flexDirection: 'row',
+        paddingTop: 10,
+        paddingBottom: 10,
+        justifyContent: 'space-evenly',
         }}> 
 
         <View style={{
