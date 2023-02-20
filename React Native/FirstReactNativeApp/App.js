@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text,TouchableHighlight, TouchableWithoutFeedback, View, Image, SafeAreaView } from 'react-native';
+import { StyleSheet, Text,TouchableHighlight, TouchableWithoutFeedback, View, Image, SafeAreaView, Button, Alert} from 'react-native';
 
 export default function App() {
   const handlePress = () => console.log("Text clicked")
@@ -13,6 +13,15 @@ export default function App() {
           height:300,
           uri: "https://picsum.photos/200/300"}}/>
       </TouchableHighlight>
+
+
+      <Button 
+        title="Click Me" 
+        onPress={() => Alert.alert("My title", "Button clicked", 
+          [{text: "Yes", onPress:() => console.log("Yes")}, 
+          {text: "No", onPress:() => console.log("No")}])}
+        color= "black"
+        ></Button>
     </SafeAreaView>
   );
 }
