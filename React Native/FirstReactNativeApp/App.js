@@ -33,26 +33,38 @@ export default function App() {
         paddingBottom: 30,
         justifyContent: 'space-evenly',
         alignItems: 'center',
+        flexWrap: 'wrap',
+        
         }}> 
 
         <View style={{
           backgroundColor: 'gold',
           height: 100,
           width: 100,
+          top: 20,
           }}> 
-
         </View>
 
         <View style={{
           backgroundColor: 'tomato',
           height: 100,
           width: 100,
-          alignSelf: 'flex-start'
           }}> 
-          
         </View>
         <View style={{
           backgroundColor: 'dodgerblue',
+          height: 100,
+          width: 100,
+          }}> 
+        </View>
+        <View style={{
+          backgroundColor: 'greenyellow',
+          height: 100,
+          width: 100,
+          }}> 
+        </View>
+        <View style={{
+          backgroundColor: 'purple',
           height: 100,
           width: 100,
           }}> 
