@@ -49,6 +49,7 @@ export default function App() {
           backgroundColor: 'tomato',
           height: 100,
           width: 100,
+          top: 20,
           }}> 
         </View>
         <View style={{
@@ -57,18 +58,7 @@ export default function App() {
           width: 100,
           }}> 
         </View>
-        <View style={{
-          backgroundColor: 'greenyellow',
-          height: 100,
-          width: 100,
-          }}> 
-        </View>
-        <View style={{
-          backgroundColor: 'purple',
-          height: 100,
-          width: 100,
-          }}> 
-        </View>
+
       </View>
 
     </SafeAreaView>
