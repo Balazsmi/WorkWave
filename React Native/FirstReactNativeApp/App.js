@@ -27,12 +27,12 @@ export default function App() {
       <View style={{
         backgroundColor: 'gray',
         top: 75,
-        height: 200,
         width: "100%",
         flexDirection: 'row',
-        paddingTop: 10,
-        paddingBottom: 10,
+        paddingTop: 30,
+        paddingBottom: 30,
         justifyContent: 'space-evenly',
+        alignItems: 'center',
         }}> 
 
         <View style={{
@@ -47,6 +47,7 @@ export default function App() {
           backgroundColor: 'tomato',
           height: 100,
           width: 100,
+          alignSelf: 'flex-start'
           }}> 
           
         </View>
