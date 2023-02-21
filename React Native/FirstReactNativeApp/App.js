@@ -29,7 +29,7 @@ export default function App() {
         top: 75,
         width: "100%",
         flexDirection: 'row',
-        height: 105,
+        height: 55,
         paddingTop: 30,
         paddingBottom: 30,
         alignItems: 'center',
@@ -38,22 +38,22 @@ export default function App() {
 
         <View style={{
           backgroundColor: 'gold',
-          height: 100,
-          width: 100,
+          height: 50,
+          width: 50,
           }}> 
         </View>
 
         <View style={{
           backgroundColor: 'tomato',
-          height: 100,
-          width: 100,
-          bottom: 20,
+          height: 50,
+          width: 50,
+          bottom: 10,
           }}> 
         </View>
         <View style={{
           backgroundColor: 'dodgerblue',
-          height: 100,
-          width: 100,
+          height: 50,
+          width: 50,
           }}> 
         </View>
 
