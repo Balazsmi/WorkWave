@@ -29,19 +29,17 @@ export default function App() {
         top: 75,
         width: "100%",
         flexDirection: 'row',
+        height: 105,
         paddingTop: 30,
         paddingBottom: 30,
-        justifyContent: 'space-evenly',
         alignItems: 'center',
-        flexWrap: 'wrap',
-        
+        justifyContent: 'space-evenly',
         }}> 
 
         <View style={{
           backgroundColor: 'gold',
           height: 100,
           width: 100,
-          top: 20,
           }}> 
         </View>
 
@@ -49,7 +47,7 @@ export default function App() {
           backgroundColor: 'tomato',
           height: 100,
           width: 100,
-          top: 20,
+          bottom: 20,
           }}> 
         </View>
         <View style={{
