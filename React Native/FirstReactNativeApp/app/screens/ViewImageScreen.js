@@ -11,7 +11,7 @@ function ViewImageScreen(props) {
             <Image resizeMode='contain' style={styles.car} source={require("../assets/car.jpg")}></Image>
         </View>
 
-        
+
     );
 }
 
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "100%",
     },
-    
+
 })
 
 export default ViewImageScreen;
