@@ -31,8 +31,8 @@ export default function App() {
       </View>
 
 
-      <View>
-        {courseGoals.map((goal) => <Text key={goal} style={styles.listItem}>{goal}</Text>)}
+      <View style={styles.listView}>
+        {courseGoals.map((goal) => <Text key={goal} style={styles.goalItem}>{goal}</Text>)}
       </View>
 
 
@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
     padding: 50,
     paddingTop: 75,
     backgroundColor: '#000000',
-    alignItems: 'center',
   },
   textInput: {
     color: 'white',
@@ -73,11 +72,19 @@ const styles = StyleSheet.create({
     borderBottomColor: '#9d9d9f',
     borderBottomWidth: 1,
     paddingBottom: 20,
+    justifyContent: 'center',
   },
-  listItem: {
+  goalItem: {
     color: 'white', 
+    backgroundColor: '#9d9d9f',
     fontSize: 20,
-    margin: 7.5,
+    marginTop: 7.5,
+    padding: 8,
     borderRadius: 6,
+    width: '100%',
   },
+  listView: {
+    top: 10,
+    justifyContent: 'space-around',
+  }
 });
