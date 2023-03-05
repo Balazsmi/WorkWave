@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { useState} from 'react';
 import { colors } from './colors.js'
-import { StyleSheet, Text, View, Button, TextInput, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, Image, ScrollView, Pressable } from 'react-native';
 
 export default function App() {
   const [enteredGoalText, setEnteredGoalText] = useState('');
@@ -35,11 +35,21 @@ export default function App() {
 
       <View style={styles.listView}>
 
+
+          
+          
+          
           {courseGoals.map((goal) => 
 
           <View style={styles.listContainer}>
 
-            <Image style={styles.check} source={require('./assets/check.png')}/>
+            <Pressable>
+
+              <Image style={styles.check} source={require('./assets/check.png')}/>
+
+            </Pressable>
+
+            
 
             <Text key={goal} style={styles.goalItem}>{goal}</Text>
 
@@ -47,6 +57,7 @@ export default function App() {
         
         
       </View>
+      
 
 
     </ScrollView>
@@ -61,7 +72,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     paddingTop: 75,
-    backgroundColor: colors.dark,
+    backgroundColor: colors.black,
   },
   textInput: {
     color: colors.white,
@@ -82,7 +93,6 @@ const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderBottomColor: colors.gray,
     borderBottomWidth: 1,
     paddingBottom: 20,
     justifyContent: 'center',
@@ -97,8 +107,8 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     display: 'flex',
-    backgroundColor: colors.gray,
-    borderRadius: 20,
+    backgroundColor: colors.dark,
+    borderRadius: 15,
     height: 70,
     marginBottom: 10,
     flexDirection: 'row',
@@ -114,7 +124,6 @@ const styles = StyleSheet.create({
     color: colors.white, 
     fontSize: 20,
     left: 30,
-    borderRadius: 6,
     width: '100%',
   },
 
