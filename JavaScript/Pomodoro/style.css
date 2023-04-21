@@ -10,8 +10,6 @@ display:none;
 #playButton {
     visibility: visible;
     position: inherit;
-    top: calc(50% - 40px);
-    left: 10%;
     border-style: none;
     background-color: transparent;
     border-radius: 25px;
@@ -24,9 +22,7 @@ display:none;
 
 #reload {
     visibility: hidden;
-    position: inherit;
-    top: calc(50% - 40px);
-    left: 10%;
+    position: absolute;
     border-style: none;
     background-color: transparent;
     border-radius: 25px;
@@ -45,17 +41,53 @@ display:none;
     height: 55px
 }
 
+.container1 {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+}
+
 .controls {
-    position: absolute;
-    left: calc(45% - 50px);
-    top: 25em;
+    display: flex;
     height: 100px;
     width: 100px;
     border-radius: 25px;
     border-style: none;
     background-color: #cccccc10;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
 
+#settings {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: #cccccc10;
+    vertical-align: top;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+#settingsButton {
+    visibility: visible;
+    position: inherit;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 25px;
+    height: 80px;
+    width: 80px;
+}
+
+#settings_img {
+    height: 60px;
+}
 
 #timer {
     position: absolute;
@@ -221,40 +253,10 @@ display:none;
 
 
 
-#settings {
-    position: absolute;
-    left: calc(55% - 50px);
-    top: 25em;
-    height: 100px;
-    width: 100px;
-    border-radius: 25px;
-    border-style: none;
-    background-color: #cccccc10;
-}
-
-#settingsButton {
-    visibility: visible;
-    position: inherit;
-    top: calc(50% - 40px);
-    left: 10%;
-    border-style: none;
-    background-color: transparent;
-    border-radius: 25px;
-    height: 80px;
-    width: 80px;
-}
-
-#settings_img {
-    height: 60px;
-}
-
-
-
 #settingsDropdown {
     visibility: hidden;
-    position: absolute;
-    left: 800px;
-    top: 400px;
+    position: relative;
+    margin-left: 20px;
     height: 300px;
     width: 300px;
     border-radius: 25px;
@@ -263,8 +265,9 @@ display:none;
 }
 
 #workSettings {
-    margin-top: 40px;
+    position: inherit;
     font-size: 20px;
+    top: 40px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
@@ -277,8 +280,9 @@ display:none;
 }
 
 #shortBreakSettings {
-    margin-top: 40px;
+    position: inherit;
     font-size: 20px;
+    top: 60px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
@@ -291,8 +295,9 @@ display:none;
 }
 
 #longBreakSettings {
-    margin-top: 40px;
+    position: inherit;
     font-size: 20px;
+    top: 80px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
