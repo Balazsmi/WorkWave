@@ -54,7 +54,7 @@ display:none;
     width: 100px;
     border-radius: 25px;
     border-style: none;
-    background-color: #cccccc10;
+    background-color: #2b2b2b;
     vertical-align: top;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,7 @@ display:none;
     width: 100px;
     border-radius: 25px;
     border-style: none;
-    background-color: #cccccc10;
+    background-color: #2b2b2b;
     vertical-align: top;
     text-align: center;
     align-items: center;
@@ -97,7 +97,7 @@ display:none;
     width: 350px;
     border-radius: 25px;
     border-style: none;
-    background-color: #cccccc10;
+    background-color: #2b2b2b;
 }
 
 #timer:hover {
@@ -233,7 +233,7 @@ display:none;
     width: 160px;
     border-radius: 25px;
     border-style: none;
-    background-color: #cccccc10;
+    background-color: #2b2b2b;
     margin: 0 auto;
 }
 
@@ -255,19 +255,18 @@ display:none;
 
 #settingsDropdown {
     visibility: hidden;
-    position: relative;
-    margin-left: 20px;
+    position: absolute;
     height: 300px;
     width: 300px;
+    top: 770px;
     border-radius: 25px;
     border-style: none;
-    background-color: #cccccc10;
+    background-color: #2b2b2b;
 }
 
 #workSettings {
     position: inherit;
     font-size: 20px;
-    top: 40px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
@@ -276,6 +275,7 @@ display:none;
     height: 50px;
     width: 140px;
     margin-left: 50px;
+    margin-top: 40px;
     cursor: default;
 }
 
@@ -291,6 +291,7 @@ display:none;
     height: 50px;
     width: 140px;
     margin-left: 20px;
+    margin-top: 70px;
     cursor: default;
 }
 
@@ -306,6 +307,7 @@ display:none;
     height: 50px;
     width: 140px;
     margin-left: 20px;
+    margin-top: 140px;
     cursor: default;
 }
 
