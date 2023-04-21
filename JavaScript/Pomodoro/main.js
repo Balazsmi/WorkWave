@@ -69,7 +69,7 @@ function playVisibility() {
 	if (startingMinutesLongBreak < 10) {
 		startingMinutesLongBreak = '0' + startingMinutesLongBreak;
 	}
-	document.getElementById("play").style.visibility = "visible";
+	document.getElementById("playButton").style.visibility = "visible";
 	document.getElementById("reload").style.visibility = "hidden";
 	if (state == 1) {
 		document.querySelector("#minutes").innerHTML = startingMinutesWork;
@@ -142,7 +142,7 @@ function work() {
 	startingMinutes = document.getElementById("workInput").value;
 	document.querySelector("#minutes").innerHTML = startingMinutesWork;
 	document.querySelector("#seconds").innerHTML = '00';
-	document.getElementById("play").style.visibility = "hidden";
+	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
 
 	playing = true;
@@ -197,7 +197,7 @@ function shortBreak() {
 	startingMinutes = startingMinutesShortBreak;
 	document.querySelector("#minutes").innerHTML = startingMinutesShortBreak;
 	document.querySelector("#seconds").innerHTML = '00';
-	document.getElementById("play").style.visibility = "hidden";
+	document.getElementById("play.Button").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
 
 	playing = true;
@@ -239,7 +239,7 @@ function longBreak() {
 	startingMinutes = 15;
 	document.querySelector("#minutes").innerHTML = startingMinutesLongBreak;
 	document.querySelector("#seconds").innerHTML = '00';
-	document.getElementById("play").style.visibility = "hidden";
+	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
 
 	playing = true;

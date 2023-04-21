@@ -7,7 +7,7 @@ display:none;
 }
 
 
-#play {
+#playButton {
     visibility: visible;
     position: inherit;
     top: calc(50% - 40px);
