@@ -140,7 +140,7 @@ function timer() {
 
 function work() {
 	startingMinutes = document.getElementById("workInput").value;
-	document.querySelector("#minutes").innerHTML = startingMinutesWork;
+	document.querySelector("#minutes").innerHTML = startingMinutes;
 	document.querySelector("#seconds").innerHTML = '00';
 	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
@@ -195,9 +195,9 @@ function work() {
 
 function shortBreak() {
 	startingMinutes = startingMinutesShortBreak;
-	document.querySelector("#minutes").innerHTML = startingMinutesShortBreak;
+	document.querySelector("#minutes").innerHTML = startingMinutes;
 	document.querySelector("#seconds").innerHTML = '00';
-	document.getElementById("play.Button").style.visibility = "hidden";
+	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
 
 	playing = true;
@@ -236,8 +236,8 @@ function shortBreak() {
 
 
 function longBreak() {
-	startingMinutes = 15;
-	document.querySelector("#minutes").innerHTML = startingMinutesLongBreak;
+	startingMinutes = startingMinutesLongBreak;
+	document.querySelector("#minutes").innerHTML = startingMinutes;
 	document.querySelector("#seconds").innerHTML = '00';
 	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
