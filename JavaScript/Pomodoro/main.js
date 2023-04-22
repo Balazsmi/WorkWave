@@ -89,9 +89,9 @@ function playVisibility() {
 function setWork() {
 	if (playing == false) {
 		startingMinutes = document.getElementById("workInput").value;
-		document.querySelector("#minutes").innerHTML = startingMinutesWork;
+		(startingMinutes < 10)? document.querySelector("#minutes").innerHTML = '0' + startingMinutes  :  document.querySelector("#minutes").innerHTML = startingMinutes;
 		document.querySelector("#seconds").innerHTML = '00';
-		document.querySelector("#title").innerHTML = startingMinutesWork + ' : ' + '00';
+		document.querySelector("#title").innerHTML = startingMinutes + ' : ' + '00';
 	} else {
 		return;
 	}
@@ -99,14 +99,11 @@ function setWork() {
 
 
 function setShortBreak() {
-	if (startingMinutesShortBreak < 10) {
-		startingMinutesShortBreak = '0' + startingMinutesShortBreak;
-	}
 	if (playing == false) {
-		startingMinutes = startingMinutesShortBreak;
-		document.querySelector("#minutes").innerHTML = startingMinutesShortBreak;
+		startingMinutes = document.getElementById("shortBreakInput").value;
+		(startingMinutes < 10)? document.querySelector("#minutes").innerHTML = '0' + startingMinutes  :  document.querySelector("#minutes").innerHTML = startingMinutes;
 		document.querySelector("#seconds").innerHTML = '00';
-		document.querySelector("#title").innerHTML = '0' + startingMinutesShortBreak + ' : ' + '00';
+		document.querySelector("#title").innerHTML = startingMinutes + ' : ' + '00';
 	} else {
 		return;
 	}
@@ -115,10 +112,10 @@ function setShortBreak() {
 
 function setLongBreak() {
 	if (playing == false) {
-		startingMinutes = startingMinutesLongBreak;
-		document.querySelector("#minutes").innerHTML = startingMinutesLongBreak;
+		startingMinutes = document.getElementById("longBreakInput").value;
+		(startingMinutes < 10)? document.querySelector("#minutes").innerHTML = '0' + startingMinutes  :  document.querySelector("#minutes").innerHTML = startingMinutes;
 		document.querySelector("#seconds").innerHTML = '00';
-		document.querySelector("#title").innerHTML = startingMinutesLongBreak + ' : ' + '00';
+		document.querySelector("#title").innerHTML = startingMinutes + ' : ' + '00';
 	} else {
 		return;
 	}
@@ -140,8 +137,6 @@ function timer() {
 
 function work() {
 	startingMinutes = document.getElementById("workInput").value;
-	document.querySelector("#minutes").innerHTML = startingMinutes;
-	document.querySelector("#seconds").innerHTML = '00';
 	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
 
@@ -195,8 +190,7 @@ function work() {
 
 function shortBreak() {
 	startingMinutes = startingMinutesShortBreak;
-	document.querySelector("#minutes").innerHTML = startingMinutes;
-	document.querySelector("#seconds").innerHTML = '00';
+
 	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
 
@@ -237,8 +231,7 @@ function shortBreak() {
 
 function longBreak() {
 	startingMinutes = startingMinutesLongBreak;
-	document.querySelector("#minutes").innerHTML = startingMinutes;
-	document.querySelector("#seconds").innerHTML = '00';
+
 	document.getElementById("playButton").style.visibility = "hidden";
 	document.getElementById("reload").style.visibility = "visible";
 
