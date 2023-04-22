@@ -87,38 +87,36 @@ function playVisibility() {
 
 //sets the correct timer duration
 function setWork() {
-	if (playing == false) {
-		startingMinutes = document.getElementById("workInput").value;
-		(startingMinutes < 10)? document.querySelector("#minutes").innerHTML = '0' + startingMinutes  :  document.querySelector("#minutes").innerHTML = startingMinutes;
-		document.querySelector("#seconds").innerHTML = '00';
-		(startingMinutes < 10)? document.querySelector("#title").innerHTML = '0' + startingMinutes + ':' + '00'  :  document.querySelector("#title").innerHTML = startingMinutes;
-	} else {
-		return;
-	}
+    if (playing == false) {
+        startingMinutes = document.getElementById("workInput").value;
+        (startingMinutes < 10) ? document.querySelector("#minutes").innerHTML = '0' + startingMinutes : document.querySelector("#minutes").innerHTML = startingMinutes;
+        document.querySelector("#seconds").innerHTML = '00';
+        
+    } else {
+        return;
+    }
 }
-
 
 function setShortBreak() {
-	if (playing == false) {
-		startingMinutes = document.getElementById("shortBreakInput").value;
-		(startingMinutes < 10)? document.querySelector("#minutes").innerHTML = '0' + startingMinutes  :  document.querySelector("#minutes").innerHTML = startingMinutes;
-		document.querySelector("#seconds").innerHTML = '00';
-		(startingMinutes < 10)? document.querySelector("#title").innerHTML = '0' + startingMinutes + ':' + '00'  :  document.querySelector("#title").innerHTML = startingMinutes;
-	} else {
-		return;
-	}
+    if (playing == false) {
+        startingMinutes = document.getElementById("shortBreakInput").value;
+        (startingMinutes < 10) ? document.querySelector("#minutes").innerHTML = '0' + startingMinutes : document.querySelector("#minutes").innerHTML = startingMinutes;
+        document.querySelector("#seconds").innerHTML = '00';
+        
+    } else {
+        return;
+    }
 }
 
-
 function setLongBreak() {
-	if (playing == false) {
-		startingMinutes = document.getElementById("longBreakInput").value;
-		(startingMinutes < 10)? document.querySelector("#minutes").innerHTML = '0' + startingMinutes  :  document.querySelector("#minutes").innerHTML = startingMinutes;
-		document.querySelector("#seconds").innerHTML = '00';
-		(startingMinutes < 10)? document.querySelector("#title").innerHTML = '0' + startingMinutes + ':' + '00'  :  document.querySelector("#title").innerHTML = startingMinutes;
-	} else {
-		return;
-	}
+    if (playing == false) {
+        startingMinutes = document.getElementById("longBreakInput").value;
+        (startingMinutes < 10) ? document.querySelector("#minutes").innerHTML = '0' + startingMinutes : document.querySelector("#minutes").innerHTML = startingMinutes;
+        document.querySelector("#seconds").innerHTML = '00';
+        
+    } else {
+        return;
+    }
 }
 
 
@@ -158,7 +156,6 @@ function work() {
 
 			document.querySelector("#minutes").innerHTML = minutes;
 			document.querySelector("#seconds").innerHTML = seconds;
-			document.querySelector("#title").innerHTML = minutes.toString() + ' : ' + seconds.toString();
 			time--;
 			console.log(minutes + ':' + seconds);
 			if (document.querySelector("#minutes").innerHTML == '00' && document.querySelector("#seconds").innerHTML == '00') {
@@ -211,7 +208,7 @@ function shortBreak() {
 
 			document.querySelector("#minutes").innerHTML = minutes;
 			document.querySelector("#seconds").innerHTML = seconds;
-			document.querySelector("#title").innerHTML = minutes.toString() + ' : ' + seconds.toString();
+
 			time--;
 			console.log(minutes + ':' + seconds);
 			if (document.querySelector("#minutes").innerHTML == '00' && document.querySelector("#seconds").innerHTML == '00') {
@@ -252,7 +249,7 @@ function longBreak() {
 
 			document.querySelector("#minutes").innerHTML = minutes;
 			document.querySelector("#seconds").innerHTML = seconds;
-			document.querySelector("#title").innerHTML = minutes.toString() + ' : ' + seconds.toString();
+
 			time--;
 			console.log(minutes + ':' + seconds);
 			if (document.querySelector("#minutes").innerHTML == '00' && document.querySelector("#seconds").innerHTML == '00') {
@@ -300,6 +297,8 @@ function setThemeColor() {
 	themeColor == '#ffd843' ? document.getElementById("yellow").style.height = '65px' : document.getElementById("yellow").style.height = '50px'; 
 	themeColor == '#ff4c4c' ? document.getElementById("red").style.height = '65px' : document.getElementById("red").style.height = '50px'; 
 }
+
+
 
 
 function Input() {
