@@ -9,7 +9,7 @@ let playagain = false;
 let state = 1;
 let counter = 0;
 let speed = 1000;
-let audio = new Audio('sounds/longerSound.mp3');
+let audio = new Audio('sounds/sound.wav');
 let theme = 1;
 let themeColor = '#10cb83';
 let startingMinutesWork = document.getElementById("workInput").value;
@@ -291,6 +291,14 @@ function showSettings() {
 		document.getElementById("settingsButton").style.backgroundColor = 'rgba(31, 31, 31, 0.527)';
 	  	x.style.visibility = "visible";
 	}
+}
+
+function setThemeColor() {
+	themeColor == '#c134dd' ? document.getElementById("purple").style.height = '65px' : document.getElementById("purple").style.height = '50px';
+	themeColor == '#316fff' ? document.getElementById("blue").style.height = '65px' : document.getElementById("blue").style.height = '50px'; 
+	themeColor == '#10cb83' ? document.getElementById("green").style.height = '65px' : document.getElementById("green").style.height = '50px'; 
+	themeColor == '#ffd843' ? document.getElementById("yellow").style.height = '65px' : document.getElementById("yellow").style.height = '50px'; 
+	themeColor == '#ff4c4c' ? document.getElementById("red").style.height = '65px' : document.getElementById("red").style.height = '50px'; 
 }
 
 

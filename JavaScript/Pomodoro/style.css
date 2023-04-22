@@ -187,41 +187,23 @@ display:none;
 
 #themes {
     position: absolute;
-    left: calc(50% - 100px);
+    left: calc(50% - 137.5px);
     top: 670px;
     height: 80px;
-    width: 200px;
+    width: 275px;
     border-radius: 25px;
     border-style: none;
     background-color: #2b2b2b;
     margin: 0 auto;
     visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#greenImg {
+.themeIcon {
     height: 50px;
     width: auto;
-    top: calc(50% - 25px);
-    position: inherit;
-    left: calc(20% - 25px);
-    cursor: pointer;
-}
-
-#redImg {
-    height: 50px;
-    width: auto;
-    top: calc(50% - 25px);
-    position: inherit;
-    left: calc(50% - 25px);
-    cursor: pointer;
-}
-
-#blueImg {
-    height: 50px;
-    width: auto;
-    top: calc(50% - 25px);
-    position: inherit;
-    left: calc(80% - 25px);
     cursor: pointer;
 }
 

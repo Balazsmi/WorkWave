@@ -91,9 +91,13 @@
         <button onclick="showThemes()" id="dropDownButton">Themes</button>
     </div>
     <div id="themes">
-        <img id="greenImg" src="img/green.png" onclick="themeColor = '#10cb83';"></button>
-        <img id="redImg" src="img/red.png" onclick="themeColor = '#ff4c4c';"></button>
-        <img id="blueImg" src="img/blue.png" onclick="themeColor = '#316fff';"></button>
+
+        <img id="purple" class="themeIcon" src="img/purple.png" onclick="setThemeColor(), themeColor = '#c134dd';" ></button>
+        <img id="blue" class="themeIcon" src="img/blue.png"     onclick="setThemeColor(), themeColor = '#316fff';"     ></button>
+        <img id="green" class="themeIcon" src="img/green.png"   onclick="setThemeColor(), themeColor = '#10cb83';"   ></button>
+        <img id="yellow" class="themeIcon" src="img/yellow.png" onclick="setThemeColor(), themeColor = '#ffd843';" ></button>
+        <img id="red" class="themeIcon" src="img/red.png"       onclick="setThemeColor(), themeColor = '#ff4c4c';"       ></button>
+    
     </div>
     <script src="main.js"></script>
 </body>
