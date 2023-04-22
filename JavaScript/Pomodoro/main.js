@@ -290,16 +290,6 @@ function showSettings() {
 	}
 }
 
-function setThemeColor() {
-	themeColor == '#c134dd' ? document.getElementById("purple").style.height = '65px' : document.getElementById("purple").style.height = '50px';
-	themeColor == '#316fff' ? document.getElementById("blue").style.height = '65px' : document.getElementById("blue").style.height = '50px'; 
-	themeColor == '#10cb83' ? document.getElementById("green").style.height = '65px' : document.getElementById("green").style.height = '50px'; 
-	themeColor == '#ffd843' ? document.getElementById("yellow").style.height = '65px' : document.getElementById("yellow").style.height = '50px'; 
-	themeColor == '#ff4c4c' ? document.getElementById("red").style.height = '65px' : document.getElementById("red").style.height = '50px'; 
-}
-
-
-
 
 function Input() {
 	if (playing == false) {
