@@ -16,7 +16,7 @@ let startingMinutesWork = document.getElementById("workInput").value;
 let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
 let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
 
-
+document.getElementById('green').style.height = '65px';
 
 
 setInterval(update, 1);
