@@ -298,3 +298,19 @@ function Input() {
 		return;
 	}
 }
+
+
+function lightmode() {
+	document.body.style.backgroundColor = 'white';
+	document.getElementById("light-mode-icon").style.visibility = 'hidden';
+	document.getElementById("dark-mode-icon").style.visibility = 'visible';
+	document.querySelector(':root').style.setProperty('--background2', '#dddddd');
+	document.querySelector(':root').style.setProperty('--white', '#b2b2b2');
+}
+
+function darkmode() {
+	document.body.style.backgroundColor = '#202020';
+	document.getElementById("dark-mode-icon").style.visibility = 'hidden';
+	document.getElementById("light-mode-icon").style.visibility = 'visible';
+	document.querySelector(':root').style.setProperty('--background2', '#2b2b2b');
+}
