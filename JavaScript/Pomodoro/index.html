@@ -11,7 +11,6 @@
     <title id="title">Pomodoro</title>
     <link rel="icon" type="image/png" href="img/Uhr.png"/>
     <link rel="shortcut icon" type="image/png" href="img/Uhr.png"/>
-    <script src="https://kit.fontawesome.com/7228fdaa38.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -28,15 +27,20 @@
     </header>
 
 
+    <div id="modeDiv">
+        <img id="light-mode-icon" onclick="lightmode();" src="img/light-mode.png">
+        <img id="dark-mode-icon"  onclick="darkmode();"  src="img/dark-mode.png">
+    </div>
+    
     
     <div class="container1">
         <nav class="controls">
-            <button id="playButton" onclick="timer();"><i id="play-icon" class="fa-solid fa-play"></i></button>
-            <button id="reload" onclick="playVisibility(); playing = false"><i id="reload-icon" class="fa-solid fa-rotate-left"></i></button>
+            <button id="playButton" onclick="timer();"><img class="play_img" src="img/play.png"></button>
+            <button id="reload" onclick="playVisibility(); playing = false"><img class="reload_img" src="img/reload.png"></button>
         </nav>
 
         <nav id="settings">
-            <button id="settingsButton" onclick="showSettings()"><i id="settings-icon" class="fa-solid fa-gear"></i></button>
+            <button id="settingsButton" onclick="showSettings()"><img id="settings_img" src="img/settings.png"></button>
         </nav>
 
         <div id="settingsDropdown">
@@ -88,16 +92,19 @@
         </div>
     </div>
 
-    <i id="palette-icon" class="fa-solid fa-palette" onclick="showThemes()"></i>
     
+    
+    <div id="themesButton">
+        <button onclick="showThemes()" id="dropDownButton">Themes</button>
+    </div>
     <div id="themes">
 
-        <i class="fa-solid fa-droplet" style="color: #c134dd"  onclick="themeColor = '#c134dd', updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: #316fff"  onclick="themeColor = '#316fff', updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: #f66e0d"  onclick="themeColor = '#f66e0d', updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: #ffd843"  onclick="themeColor = '#ffd843', updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: #ff4c4c"  onclick="themeColor = '#ff4c4c', updateThemeColor()"></i>
-
+        <img id="purple" class="themeIcon" src="img/purple.png" onclick="document.getElementById('purple').style.height = '65px', document.getElementById('blue').style.height = '50px', document.getElementById('green').style.height = '50px', document.getElementById('yellow').style.height = '50px', document.getElementById('red').style.height = '50px', themeColor = '#c134dd'"></button>
+        <img id="blue" class="themeIcon" src="img/blue.png"     onclick="document.getElementById('blue').style.height = '65px',   document.getElementById('purple').style.height = '50px', document.getElementById('green').style.height = '50px', document.getElementById('yellow').style.height = '50px', document.getElementById('red').style.height = '50px',themeColor = '#316fff'"></button>
+        <img id="green" class="themeIcon" src="img/white.png"   onclick="document.getElementById('green').style.height = '65px',  document.getElementById('blue').style.height = '50px', document.getElementById('purple').style.height = '50px', document.getElementById('yellow').style.height = '50px', document.getElementById('red').style.height = '50px',themeColor = '#ffffff'"></button>
+        <img id="yellow" class="themeIcon" src="img/yellow.png" onclick="document.getElementById('yellow').style.height = '65px', document.getElementById('blue').style.height = '50px', document.getElementById('green').style.height = '50px', document.getElementById('purple').style.height = '50px', document.getElementById('red').style.height = '50px',themeColor = '#ffd843'"></button>
+        <img id="red" class="themeIcon" src="img/red.png"       onclick="document.getElementById('red').style.height = '65px',    document.getElementById('blue').style.height = '50px', document.getElementById('green').style.height = '50px', document.getElementById('yellow').style.height = '50px', document.getElementById('purple').style.height = '50px',themeColor = '#ff4c4c'"></button>
+    
     </div>
     <script src="main.js"></script>
 </body>
