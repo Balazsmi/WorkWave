@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(32, 32, 32);
+    background-color: var(--dark-gray);
 }
 img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
 {
@@ -7,15 +7,30 @@ display:none;
 }
 
 :root {
-    --blue: #6495ed;
-    --white: #ffffff;
+    --dark-gray: #313131;
+    --white: #f5e6c8;
     --gray: #202020;
     --hover: rgba(31, 31, 31, 0.527);
-    --background1: #cccccc;
+    --background1: var(--font);
     --background2: #2b2b2b;
+    --iconColor: #616161;
+    --font: #5e5e5e;
+    --purple: #c134dd;
+    --blue: #6495ed;
+    --orange:#f66e0d;
+    --yellow:#ffd843;
+    --red:  #ff4c4c;
 
 }
 
+.fa-solid {
+    scale: 2;
+    color: var(--iconColor);
+}
+
+.fa-play:hover, .fa-gear:hover, .fa-rotate-left:hover {
+    color: var(--white);
+}
 
 #playButton {
     visibility: visible;
@@ -26,8 +41,10 @@ display:none;
     height: 80px;
     width: 80px;
 }
-#playButton:hover {
-    background-color: var(--hover);
+
+#play-icon2 {
+    height: 150px;
+    visibility: visible;
 }
 
 #reload {
@@ -39,9 +56,7 @@ display:none;
     height: 80px;
     width: 80px;
 }
-#reload:hover {
-    background-color: var(--hover);
-}
+
 
 .play_img {
     height: 50px;
@@ -64,7 +79,6 @@ display:none;
     width: 100px;
     border-radius: 25px;
     border-style: none;
-    background-color: var(--background2);
     vertical-align: top;
     justify-content: center;
     align-items: center;
@@ -77,7 +91,6 @@ display:none;
     width: 100px;
     border-radius: 25px;
     border-style: none;
-    background-color: var(--background2);
     vertical-align: top;
     text-align: center;
     align-items: center;
@@ -108,12 +121,10 @@ display:none;
     width: 350px;
     border-radius: 25px;
     border-style: none;
-    background-color: var(--background2);
+    cursor: default;
+    background-color: transparent;
 }
 
-#timer:hover {
-    cursor: default;
-}
 
 #minutes {
     position: inherit;
@@ -146,7 +157,7 @@ display:none;
     position: absolute;
     left: calc(50% - 250px);
     top: 5em;
-    height: 70px;
+    height: 60px;
     width: 500px;
     border-radius: 25px;
     border-style: none;
@@ -159,7 +170,7 @@ display:none;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
-    color: #cccccc;
+    color: var(--font);
     border-radius: 15px;
     top: calc(50% - 25px);
     width: 140px;
@@ -168,13 +179,21 @@ display:none;
     left: calc(20% - 70px);
 }
 
+#work:hover {
+    color: var(--white) !important;
+}
+
+#work:active, #short_break:active, #long_break:active, #playButton:active, #reload:active, #settings:active{
+    background-color: var(--dark-gray);
+}
+
 
 #short_break {
     font-size: 20px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
-    color: #cccccc;
+    color: var(--font);
     border-radius: 15px;
     top: calc(50% - 25px);
     height: 50px;
@@ -184,12 +203,16 @@ display:none;
 }
 
 
+#short_break:hover {
+    color: var(--white) !important;
+}
+
 #long_break {
     font-size: 20px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
-    color: #cccccc;
+    color: var(--font);
     border-radius: 15px;
     top: calc(50% - 25px);
     height: 50px;
@@ -197,14 +220,17 @@ display:none;
     position: inherit;
     left: calc(80% - 70px);
 }
+#long_break:hover {
+    color: var(--white) !important;
+}
 
 #themes {
     position: absolute;
-    left: calc(50% - 137.5px);
-    top: 670px;
-    height: 80px;
+    right: 80px;
+    bottom: 20px;
+    height: 50px;
     width: 275px;
-    border-radius: 25px;
+    border-radius: 15px;
     border-style: none;
     background-color: var(--background2);
     margin: 0 auto;
@@ -222,25 +248,27 @@ display:none;
     cursor: pointer;
 }
 
-#themesButton {
+.fa-palette {
     position: absolute;
-    left: calc(50% - 80px);
-    top: 570px;
-    height: 80px;
-    width: 160px;
-    border-radius: 25px;
-    border-style: none;
-    background-color: var(--background2);
-    margin: 0 auto;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
 }
 
+#palette-icon:focus {
+    color: blue;
+}
+
+.fa-palette:hover {
+    color: var(--white);
+}
 
 #dropDownButton {
     font-size: 20px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
-    color: #cccccc;
+    color: var(--font);
     border-radius: 15px;
     width: 130px;
     height: 50px;
@@ -249,6 +277,14 @@ display:none;
     left: calc(50% - 65px);
 }
 
+.fa-droplet {
+    margin: 20px;
+    cursor: pointer;
+}
+
+.fa-droplet:hover {
+    scale: 2.4;
+}
 
 
 #settingsDropdown {
@@ -256,7 +292,7 @@ display:none;
     position: absolute;
     height: 300px;
     width: 300px;
-    top: 770px;
+    top: 600px;
     border-radius: 25px;
     border-style: none;
     background-color: var(--background2);
@@ -268,7 +304,7 @@ display:none;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
-    color: #cccccc;
+    color: var(--font);
     border-radius: 15px;
     height: 50px;
     width: 140px;
@@ -284,7 +320,7 @@ display:none;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
-    color: #cccccc;
+    color: var(--font);
     border-radius: 15px;
     height: 50px;
     width: 140px;
@@ -300,7 +336,7 @@ display:none;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
-    color: #cccccc;
+    color: var(--font);
     border-radius: 15px;
     height: 50px;
     width: 140px;
@@ -320,7 +356,7 @@ option {
     background-color: var(--background2);
     border-style: none;
     border-radius: 17px;
-    color: #cccccc;
+    color: var(--font);
     height: 50px;
     width: 80px;
     font-size: 30px;
@@ -328,13 +364,14 @@ option {
     position: absolute;
     top: 25px;
     left: 170px;
+    cursor: pointer;
 }
 
 #shortBreakInput {
     background-color: var(--background2);
     border-style: none;
     border-radius: 17px;
-    color: #cccccc;
+    color: var(--font);
     height: 50px;
     width: 80px;
     font-size: 30px;
@@ -342,13 +379,14 @@ option {
     position: absolute;
     top: 115px;
     left: 170px;
+    cursor: pointer;
 }
 
 #longBreakInput {
     background-color: var(--background2);
     border-style: none;
     border-radius: 17px;
-    color: #cccccc;
+    color: var(--font);
     height: 50px;
     width: 80px;
     font-size: 30px;
@@ -356,18 +394,16 @@ option {
     position: absolute;
     top: 205px;
     left: 170px;
+    cursor: pointer;
 }
 
-#workInput:hover {
-    background-color: #242424;
-}
-#shortBreakInput:hover {
-    background-color: #242424;
-}
-#longBreakInput:hover {
-    background-color: #242424;
+#palette-icon:focus, #workInput:focus, #shortBreakInput:focus, #longBreakInput:focus {
+    color: var(--white);
 }
 
+#palette-icon:hover {
+    color: var(--white) !important;
+}
 
 button:hover {
     cursor: pointer;
