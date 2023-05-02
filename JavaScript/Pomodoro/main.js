@@ -8,50 +8,48 @@ let countdownReset = null;
 let playagain = false;
 let state = 1;
 let counter = 0;
-let speed = 1000;
+let speed = 1;
 let audio = new Audio('sounds/sound.wav');
 let theme = 1;
-let themeColor = '#ffffff';
+let themeColor = 'var(--orange)';
+let fontColor = '#5e5e5e';
 let startingMinutesWork = document.getElementById("workInput").value;
 let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
 let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
-
-document.getElementById('green').style.height = '65px';
-
 
 setInterval(update, 1);
 function update() {
 
 	if (state == 1) {
-		document.getElementById("work").style.backgroundColor = 'rgba(31, 31, 31, 0.527)';
-		document.getElementById("short_break").style.backgroundColor = 'transparent';
-		document.getElementById("long_break").style.backgroundColor = 'transparent';
 		document.getElementById("work").style.color = themeColor;
 		document.getElementById("minutes").style.color = themeColor;
 		document.getElementById("doppelpunkt").style.color = themeColor;
 		document.getElementById("seconds").style.color = themeColor;
-		document.getElementById("short_break").style.color = '#cccccc';
-		document.getElementById("long_break").style.color = '#cccccc';
-	} else if (state == 2) {
-		document.getElementById("short_break").style.backgroundColor = 'rgba(31, 31, 31, 0.527)';
-		document.getElementById("work").style.backgroundColor = 'transparent';
+		document.getElementById("short_break").style.color = fontColor;
+		document.getElementById("long_break").style.color = fontColor;
+		document.getElementById("work").style.backgroundColor = 'var(--dark-gray)';
+		document.getElementById("short_break").style.backgroundColor = 'transparent';
 		document.getElementById("long_break").style.backgroundColor = 'transparent';
+	} else if (state == 2) {
 		document.getElementById("short_break").style.color = themeColor;
 		document.getElementById("minutes").style.color = themeColor;
 		document.getElementById("doppelpunkt").style.color = themeColor;
 		document.getElementById("seconds").style.color = themeColor;
-		document.getElementById("work").style.color = '#cccccc';
-		document.getElementById("long_break").style.color = '#cccccc';
-	} else if (state == 3) {
-		document.getElementById("long_break").style.backgroundColor = 'rgba(31, 31, 31, 0.527)';
-		document.getElementById("short_break").style.backgroundColor = 'transparent';
+		document.getElementById("work").style.color = fontColor;
+		document.getElementById("long_break").style.color = fontColor;
+		document.getElementById("short_break").style.backgroundColor = 'var(--dark-gray)';
 		document.getElementById("work").style.backgroundColor = 'transparent';
+		document.getElementById("long_break").style.backgroundColor = 'transparent';
+	} else if (state == 3) {
 		document.getElementById("long_break").style.color = themeColor;
 		document.getElementById("minutes").style.color = themeColor;
 		document.getElementById("doppelpunkt").style.color = themeColor;
 		document.getElementById("seconds").style.color = themeColor;
-		document.getElementById("short_break").style.color = '#cccccc';
-		document.getElementById("work").style.color = '#cccccc';
+		document.getElementById("short_break").style.color = fontColor;
+		document.getElementById("work").style.color = fontColor;
+		document.getElementById("long_break").style.backgroundColor = 'var(--dark-gray)';
+		document.getElementById("short_break").style.backgroundColor = 'transparent';
+		document.getElementById("work").style.backgroundColor = 'transparent';
 	}
 }
 
@@ -271,10 +269,9 @@ function longBreak() {
 function showThemes() {
 	var x = document.getElementById("themes");
 	if (x.style.visibility == "visible") {
-		document.getElementById("dropDownButton").style.backgroundColor = 'transparent';
+
 	  	x.style.visibility = "hidden";
 	} else {
-		document.getElementById("dropDownButton").style.backgroundColor = 'rgba(31, 31, 31, 0.527)';
 	  	x.style.visibility = "visible";
 	}
 }
@@ -283,9 +280,10 @@ function showSettings() {
 	var x = document.getElementById("settingsDropdown");
 	if (x.style.visibility == "visible") {
 		document.getElementById("settingsButton").style.backgroundColor = 'transparent';
+		document.getElementById("settings-icon").style.color = 'var(--iconColor)';
 	  	x.style.visibility = "hidden";
 	} else {
-		document.getElementById("settingsButton").style.backgroundColor = 'rgba(31, 31, 31, 0.527)';
+		document.getElementById("settings-icon").style.color = themeColor;
 	  	x.style.visibility = "visible";
 	}
 }
@@ -313,4 +311,20 @@ function darkmode() {
 	document.getElementById("dark-mode-icon").style.visibility = 'hidden';
 	document.getElementById("light-mode-icon").style.visibility = 'visible';
 	document.querySelector(':root').style.setProperty('--background2', '#2b2b2b');
+}
+
+function showThemes() {
+	var x = document.getElementById("themes");
+	if (x.style.visibility == "visible") {
+		document.getElementById("palette-icon").style.color = 'var(--iconColor)';
+	  	x.style.visibility = "hidden";
+	} else {
+		document.getElementById("palette-icon").style.color = themeColor;
+	  	x.style.visibility = "visible";
+	}
+}
+
+function updateThemeColor() {
+	document.getElementById("palette-icon").style.color = themeColor;
+	document.getElementById("settings-icon").style.color = themeColor;
 }
