@@ -16,6 +16,8 @@ let startingMinutesWork = document.getElementById("workInput").value;
 let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
 let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
 
+themeColor = localStorage.getItem("themeColorLocalStorage");
+
 setInterval(update, 1);
 function update() {
 
@@ -324,6 +326,7 @@ function showThemes() {
 }
 
 function updateThemeColor() {
+	localStorage.setItem("themeColorLocalStorage", themeColor);
 	document.getElementById("palette-icon").style.color = themeColor;
 	document.getElementById("settings-icon").style.color = themeColor;
 }
