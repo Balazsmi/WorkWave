@@ -16,36 +16,37 @@ let startingMinutesWork = document.getElementById("workInput").value;
 let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
 let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
 
+
 themeColor = localStorage.getItem("themeColorLocalStorage");
 
 setInterval(update, 1);
 function update() {
 
 	if (state == 1) {
-		document.getElementById("work").style.color = themeColor;
-		document.getElementById("minutes").style.color = themeColor;
-		document.getElementById("doppelpunkt").style.color = themeColor;
-		document.getElementById("seconds").style.color = themeColor;
+		document.getElementById("work").style.color = 'var(--themeColor)';
+		document.getElementById("minutes").style.color = 'var(--themeColor)';
+		document.getElementById("doppelpunkt").style.color = 'var(--themeColor)';
+		document.getElementById("seconds").style.color = 'var(--themeColor)';
 		document.getElementById("short_break").style.color = 'var(--font)';
 		document.getElementById("long_break").style.color = 'var(--font)';
 		document.getElementById("work").style.backgroundColor = 'var(--dark-gray)';
 		document.getElementById("short_break").style.backgroundColor = 'transparent';
 		document.getElementById("long_break").style.backgroundColor = 'transparent';
 	} else if (state == 2) {
-		document.getElementById("short_break").style.color = themeColor;
-		document.getElementById("minutes").style.color = themeColor;
-		document.getElementById("doppelpunkt").style.color = themeColor;
-		document.getElementById("seconds").style.color = themeColor;
+		document.getElementById("short_break").style.color = 'var(--themeColor)';
+		document.getElementById("minutes").style.color = 'var(--themeColor)';
+		document.getElementById("doppelpunkt").style.color = 'var(--themeColor)';
+		document.getElementById("seconds").style.color = 'var(--themeColor)';
 		document.getElementById("work").style.color = 'var(--font)';
 		document.getElementById("long_break").style.color = 'var(--font)';
 		document.getElementById("short_break").style.backgroundColor = 'var(--dark-gray)';
 		document.getElementById("work").style.backgroundColor = 'transparent';
 		document.getElementById("long_break").style.backgroundColor = 'transparent';
 	} else if (state == 3) {
-		document.getElementById("long_break").style.color = themeColor;
-		document.getElementById("minutes").style.color = themeColor;
-		document.getElementById("doppelpunkt").style.color = themeColor;
-		document.getElementById("seconds").style.color = themeColor;
+		document.getElementById("long_break").style.color = 'var(--themeColor)';
+		document.getElementById("minutes").style.color = 'var(--themeColor)';
+		document.getElementById("doppelpunkt").style.color = 'var(--themeColor)';
+		document.getElementById("seconds").style.color = 'var(--themeColor)';
 		document.getElementById("short_break").style.color = 'var(--font)';
 		document.getElementById("work").style.color = 'var(--font)';
 		document.getElementById("long_break").style.backgroundColor = 'var(--dark-gray)';
@@ -284,7 +285,7 @@ function showSettings() {
 		document.getElementById("settings-icon").style.color = 'var(--iconColor)';
 	  	x.style.visibility = "hidden";
 	} else {
-		document.getElementById("settings-icon").style.color = themeColor;
+		document.getElementById("settings-icon").style.color = 'var(--themeColor)';
 	  	x.style.visibility = "visible";
 	}
 }
@@ -320,13 +321,15 @@ function showThemes() {
 		document.getElementById("palette-icon").style.color = 'var(--iconColor)';
 	  	x.style.visibility = "hidden";
 	} else {
-		document.getElementById("palette-icon").style.color = themeColor;
+		document.getElementById("palette-icon").style.color = 'var(--themeColor)';
 	  	x.style.visibility = "visible";
+		
 	}
 }
 
-function updateThemeColor() {
-	localStorage.setItem("themeColorLocalStorage", themeColor);
-	document.getElementById("palette-icon").style.color = themeColor;
-	document.getElementById("settings-icon").style.color = themeColor;
+function updatethemeColor() {
+	localStorage.setItem("themeColorLocalStorage", 'var(--themeColor)');
+	document.getElementById("palette-icon").style.color = 'var(--themeColor)';
+	document.getElementById("settings-icon").style.color = 'var(--themeColor)';
+	document.getElementById("wave").style.color = 'var(--themeColor)';
 }

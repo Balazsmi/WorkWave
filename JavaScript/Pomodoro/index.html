@@ -11,9 +11,17 @@
     <title id="title">Pomodoro</title>
     <link rel="icon" type="image/png" href="img/Uhr.png"/>
     <link rel="shortcut icon" type="image/png" href="img/Uhr.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7228fdaa38.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <div id="heading">
+        <i id="wave" class="fa-solid fa-water"></i>
+        <label id="title">WorkWave</>
+    </div>
 
     <button id="timer">
         <div id="minutes">25</div> 
@@ -92,11 +100,13 @@
     
     <div id="themes">
 
-        <i class="fa-solid fa-droplet" style="color: var(--purple)"  onclick="themeColor = 'var(--purple)', updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: var(--blue)  "  onclick="themeColor = 'var(--blue)'  , updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: var(--orange)"  onclick="themeColor = 'var(--orange)', updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: var(--yellow)"  onclick="themeColor = 'var(--yellow)', updateThemeColor()"></i>
-        <i class="fa-solid fa-droplet" style="color: var(--red)   "  onclick="themeColor = 'var(--red)'   , updateThemeColor()"></i>
+        <i class="fa-solid fa-droplet" style="color: var(--purple)"  onclick="document.querySelector(':root').style.setProperty('--themeColor', 'var(--purple)'), updateThemeColor()"></i>
+        <i class="fa-solid fa-droplet" style="color: var(--blue)  "  onclick="document.querySelector(':root').style.setProperty('--themeColor', 'var(--blue)'  ), updateThemeColor()"></i>
+        <i class="fa-solid fa-droplet" style="color: var(--green) "  onclick="document.querySelector(':root').style.setProperty('--themeColor', 'var(--green) '), updateThemeColor()"></i>
+        <i class="fa-solid fa-droplet" style="color: var(--yellow)"  onclick="document.querySelector(':root').style.setProperty('--themeColor', 'var(--yellow)'), updateThemeColor()"></i>
+        <i class="fa-solid fa-droplet" style="color: var(--orange)"  onclick="document.querySelector(':root').style.setProperty('--themeColor', 'var(--orange)'), updateThemeColor()"></i>
+        <i class="fa-solid fa-droplet" style="color: var(--red)   "  onclick="document.querySelector(':root').style.setProperty('--themeColor', 'var(--red)'   ), updateThemeColor()"></i>
+        
 
     </div>
     <script src="main.js"></script>
