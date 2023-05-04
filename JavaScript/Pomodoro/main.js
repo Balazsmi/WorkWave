@@ -11,13 +11,14 @@ let counter = 0;
 let speed = 1000;
 let audio = new Audio('sounds/sound.wav');
 let theme = 1;
-let themeColor = 'var(--orange)';
 let startingMinutesWork = document.getElementById("workInput").value;
 let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
 let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
 
 
-themeColor = localStorage.getItem("themeColorLocalStorage");
+
+document.querySelector(':root').style.setProperty('--themeColor', localStorage.getItem("themeColorLocalStorage"));
+
 
 setInterval(update, 1);
 function update() {
@@ -327,8 +328,8 @@ function showThemes() {
 	}
 }
 
-function updatethemeColor() {
-	localStorage.setItem("themeColorLocalStorage", 'var(--themeColor)');
+function updateThemeColor() {
+	localStorage.setItem("themeColorLocalStorage", getComputedStyle(document.documentElement).getPropertyValue('--themeColor'));
 	document.getElementById("palette-icon").style.color = 'var(--themeColor)';
 	document.getElementById("settings-icon").style.color = 'var(--themeColor)';
 	document.getElementById("wave").style.color = 'var(--themeColor)';
