@@ -39,19 +39,23 @@ display:none;
 }
 
 #title {
-    font-size: 25px;
+    font-size: 30px;
     margin-left: 25px;
+    color: var(--white);
+    cursor: pointer;
 }
 
 #heading {
     position: absolute;
     color: white;
-    font-family: 'MuseoModerno', cursive;
+    font-family: 'Space Grotesk', sans-serif;
     top: 30px;
     left: 50px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
+
 
 #playButton {
     visibility: visible;

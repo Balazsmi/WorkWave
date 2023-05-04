@@ -334,3 +334,4 @@ function updateThemeColor() {
 	document.getElementById("settings-icon").style.color = 'var(--themeColor)';
 	document.getElementById("wave").style.color = 'var(--themeColor)';
 }
+
