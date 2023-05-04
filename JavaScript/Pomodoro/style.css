@@ -451,7 +451,34 @@ button:hover {
 }
 
 
+#github-div {
+    height: 75px;
+    position: absolute;
+    width: 30%;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    color: var(--font);
+    cursor: pointer;
+}
 
+#github-div:hover {
+    color: var(--white);
+}
+
+#github {
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: 'Jetbrains Mono';
+    font-weight: bolder;
+    margin-top: 17.5px;
+}
+
+#github-icon {
+    cursor: pointer;
+    margin-left: 30px;
+}
 
 
 @media (max-width: 530px) {
