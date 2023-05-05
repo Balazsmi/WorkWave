@@ -1,0 +1,558 @@
+body {
+    background-color: var(--dark-gray);
+}
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
+{
+display:none;
+}
+
+:root {
+    --dark-gray: #313131;
+    --white: #f5e6c8;
+    --gray: #202020;
+    --hover: rgba(31, 31, 31, 0.527);
+    --background1: var(--font);
+    --background2: #2b2b2b;
+    --iconColor: #616161;
+    --font: #5e5e5e;
+    --purple: #c134dd;
+    --blue: #2b8ecf;
+    --orange:#f66e0d;
+    --themeColor: #00d062;
+    --yellow:#ffd843;
+    --red:  #ff4c4c;
+    --green: #00d062;
+}
+
+.fa-solid {
+    scale: 2;
+    color: var(--iconColor);
+}
+
+.fa-play:hover, .fa-gear:hover, .fa-rotate-left:hover {
+    color: var(--white);
+}
+
+#wave {
+    scale: 2.5;
+    color: var(--themeColor);
+}
+
+#title {
+    font-size: 30px;
+    margin-left: 25px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+#heading {
+    position: absolute;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    top: 30px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#playButton {
+    visibility: visible;
+    position: inherit;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 25px;
+    height: 80px;
+    width: 80px;
+}
+
+#play-icon2 {
+    height: 150px;
+    visibility: visible;
+}
+
+#reload {
+    visibility: hidden;
+    position: absolute;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 25px;
+    height: 80px;
+    width: 80px;
+}
+
+
+.play_img {
+    height: 50px;
+}
+
+.reload_img {
+    height: 55px
+}
+
+.container1 {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+}
+
+.controls {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    border-style: none;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#settings {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    border-style: none;
+    vertical-align: top;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+#settingsButton {
+    visibility: visible;
+    position: inherit;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 25px;
+    height: 80px;
+    width: 80px;
+}
+
+
+#settings_img {
+    height: 60px;
+}
+
+#timer {
+    position: absolute;
+    left: calc(50% - 175px);
+    top: 16em;
+    height: 120px;
+    width: 350px;
+    border-radius: 25px;
+    border-style: none;
+    cursor: default;
+    background-color: transparent;
+}
+
+
+#minutes {
+    position: inherit;
+    left: 10px;
+    top: 5%;
+    color: var(--white);
+    font-size: 100px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#seconds {
+    position: inherit;
+    left: 200px;
+    top: 5%;
+    color: var(--white);
+    font-size: 100px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#doppelpunkt {
+    position: inherit;
+    left: 160px;
+    top: 0px;
+    color: var(--white);
+    font-size: 100px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.header {
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 5em;
+    height: 60px;
+    width: 500px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: var(--background2);
+    margin: 0 auto;
+}
+
+#work {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    border-style: none;
+    background-color: transparent;
+    color: var(--font);
+    border-radius: 15px;
+    top: calc(50% - 25px);
+    width: 140px;
+    height: 50px;
+    position: inherit;
+    left: calc(20% - 70px);
+}
+
+#work:hover {
+    color: var(--white) !important;
+}
+
+#work:active, #short_break:active, #long_break:active, #playButton:active, #reload:active, #settings:active{
+    background-color: var(--dark-gray);
+}
+
+
+#short_break {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    border-style: none;
+    background-color: transparent;
+    color: var(--font);
+    border-radius: 15px;
+    top: calc(50% - 25px);
+    height: 50px;
+    width: 140px;
+    position: inherit;
+    left: calc(50% - 70px);
+}
+
+
+#short_break:hover {
+    color: var(--white) !important;
+}
+
+#long_break {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    border-style: none;
+    background-color: transparent;
+    color: var(--font);
+    border-radius: 15px;
+    top: calc(50% - 25px);
+    height: 50px;
+    width: 140px;
+    position: inherit;
+    left: calc(80% - 70px);
+}
+#long_break:hover {
+    color: var(--white) !important;
+}
+
+#themes {
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    height: 50px;
+    width: fit-content;
+    border-radius: 15px;
+    border-style: none;
+    background-color: var(--background2);
+    margin: 0 auto;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.themeIcon {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.fa-palette {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+}
+
+
+.fa-palette:hover {
+    color: var(--white);
+}
+
+#dropDownButton {
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    border-style: none;
+    background-color: transparent;
+    color: var(--font);
+    border-radius: 15px;
+    width: 130px;
+    height: 50px;
+    position: inherit;
+    top: calc(50% - 25px);
+    left: calc(50% - 65px);
+}
+
+.fa-droplet {
+    margin: 20px;
+    cursor: pointer;
+}
+
+.fa-droplet:hover {
+    scale: 2.4;
+}
+
+
+#settingsDropdown {
+    visibility: hidden;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 600px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: var(--background2);
+}
+
+#workSettings {
+    position: inherit;
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    border-style: none;
+    background-color: transparent;
+    color: var(--font);
+    border-radius: 15px;
+    height: 50px;
+    width: 140px;
+    margin-left: 50px;
+    margin-top: 40px;
+    cursor: default;
+}
+
+#shortBreakSettings {
+    position: inherit;
+    font-size: 20px;
+    top: 60px;
+    font-family: 'Varela Round', sans-serif;
+    border-style: none;
+    background-color: transparent;
+    color: var(--font);
+    border-radius: 15px;
+    height: 50px;
+    width: 140px;
+    margin-left: 20px;
+    margin-top: 70px;
+    cursor: default;
+}
+
+#longBreakSettings {
+    position: inherit;
+    font-size: 20px;
+    top: 80px;
+    font-family: 'Varela Round', sans-serif;
+    border-style: none;
+    background-color: transparent;
+    color: var(--font);
+    border-radius: 15px;
+    height: 50px;
+    width: 140px;
+    margin-left: 20px;
+    margin-top: 140px;
+    cursor: default;
+}
+
+option {
+    border-style: none;
+    font-size: 30px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+#workInput {
+    background-color: var(--background2);
+    border-style: none;
+    border-radius: 17px;
+    color: var(--font);
+    height: 50px;
+    width: 80px;
+    font-size: 30px;
+    font-family: 'Varela Round', sans-serif;
+    position: absolute;
+    top: 25px;
+    left: 170px;
+    cursor: pointer;
+}
+
+#shortBreakInput {
+    background-color: var(--background2);
+    border-style: none;
+    border-radius: 17px;
+    color: var(--font);
+    height: 50px;
+    width: 80px;
+    font-size: 30px;
+    font-family: 'Varela Round', sans-serif;
+    position: absolute;
+    top: 115px;
+    left: 170px;
+    cursor: pointer;
+}
+
+#longBreakInput {
+    background-color: var(--background2);
+    border-style: none;
+    border-radius: 17px;
+    color: var(--font);
+    height: 50px;
+    width: 80px;
+    font-size: 30px;
+    font-family: 'Varela Round', sans-serif;
+    position: absolute;
+    top: 205px;
+    left: 170px;
+    cursor: pointer;
+}
+
+#palette-icon:focus, #workInput:focus, #shortBreakInput:focus, #longBreakInput:focus {
+    color: var(--white);
+}
+
+#palette-icon:hover {
+    color: var(--white) !important;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--hover);
+}
+
+::selection {
+    background: transparent;
+}
+
+
+#modeDiv {
+    height: 50px;
+    background-color: var(--background2);
+    width: 50px;
+    border-radius: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#github-div {
+    height: 75px;
+    position: absolute;
+    width: 30%;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    color: var(--font);
+    cursor: pointer;
+}
+
+#github-div:hover {
+    color: var(--white);
+}
+
+#github {
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: 'Jetbrains Mono';
+    font-weight: bolder;
+    margin-top: 17.5px;
+}
+
+#github-icon {
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+
+@media (max-width: 530px) {
+    .header {
+        height: 200px;
+        width: 200px;
+        left: calc(50% - 100px);
+        top: 20px;
+    }
+    #timer {
+        top: 250px;
+    }
+    .controls {
+        top: 400px;
+    }
+    #work {
+        top: 10px;
+        left: 15%;
+    }
+    #short_break {
+        top: 70px;
+        left: 15%;
+    }
+    #long_break {
+        top: 130px;
+        left: 15%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    #timer {
+        width: 280px;
+        left: calc(50% - 140px);
+    }
+    #minutes {
+        top: 15px;
+        left: 20px;
+        font-size: 80px;
+    }
+    #seconds {
+        top: 15px;
+        left: 160px;
+        font-size: 80px;
+    }
+    #doppelpunkt {
+        top: 10px;
+        left: 130px;
+        font-size: 80px;
+    }
+}
+
+@media (max-height: 580px) {
+    #timer {
+        top: 170px;
+        width: 280px;
+        left: calc(50% - 140px);
+    }
+    #minutes {
+        top: 15px;
+        left: 20px;
+        font-size: 80px;
+    }
+    #seconds {
+        top: 15px;
+        left: 160px;
+        font-size: 80px;
+    }
+    #doppelpunkt {
+        top: 10px;
+        left: 130px;
+        font-size: 80px;
+    }
+    .controls {
+        top: 310px;
+    }
+}
