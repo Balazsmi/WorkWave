@@ -1,4 +1,4 @@
-# Pomodoro Timer Website
+# WorkWave
 
 This website is a simple Pomodoro Timer that helps you manage your time efficiently by breaking down your work into 25-minute intervals, separated by short breaks.
 
