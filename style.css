@@ -42,7 +42,6 @@ display:none;
     font-size: 30px;
     margin-left: 25px;
     color: var(--white);
-    cursor: pointer;
 }
 
 #heading {
@@ -53,7 +52,6 @@ display:none;
     left: 50px;
     display: flex;
     align-items: center;
-    cursor: pointer;
 }
 
 
