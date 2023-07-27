@@ -19,7 +19,6 @@ let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
 
 document.querySelector(':root').style.setProperty('--themeColor', localStorage.getItem("themeColorLocalStorage"));
 
-
 setInterval(update, 1);
 function update() {
 
@@ -33,6 +32,12 @@ function update() {
 		document.getElementById("work").style.backgroundColor = 'var(--dark-gray)';
 		document.getElementById("short_break").style.backgroundColor = 'transparent';
 		document.getElementById("long_break").style.backgroundColor = 'transparent';
+		document.getElementById("work").style.boxShadow = '4px 4px 0px #202020';
+		document.getElementById("short_break").style.boxShadow = '7.5px 7.5px 0px #202020';
+		document.getElementById("long_break").style.boxShadow = '7.5px 7.5px 0px #202020';
+		document.getElementById("work").style.transform = 'translate3d(3.5px, 3.5px, 0)';
+		document.getElementById("short_break").style.transform = 'translate3d(0px, 0px, 0)';
+		document.getElementById("long_break").style.transform = 'translate3d(0px, 0px, 0)';
 	} else if (state == 2) {
 		document.getElementById("short_break").style.color = 'var(--themeColor)';
 		document.getElementById("minutes").style.color = 'var(--themeColor)';
@@ -43,6 +48,12 @@ function update() {
 		document.getElementById("short_break").style.backgroundColor = 'var(--dark-gray)';
 		document.getElementById("work").style.backgroundColor = 'transparent';
 		document.getElementById("long_break").style.backgroundColor = 'transparent';
+		document.getElementById("work").style.boxShadow = '7.5px 7.5px 0px #202020';
+		document.getElementById("short_break").style.boxShadow = '4px 4px 0px #202020';
+		document.getElementById("long_break").style.boxShadow = '7.5px 7.5px 0px #202020';
+		document.getElementById("work").style.transform = 'translate3d(0px, 0px, 0)';
+		document.getElementById("short_break").style.transform = 'translate3d(3.5px, 3.5px, 0)';
+		document.getElementById("long_break").style.transform = 'translate3d(0px, 0px, 0)';
 	} else if (state == 3) {
 		document.getElementById("long_break").style.color = 'var(--themeColor)';
 		document.getElementById("minutes").style.color = 'var(--themeColor)';
@@ -53,6 +64,12 @@ function update() {
 		document.getElementById("long_break").style.backgroundColor = 'var(--dark-gray)';
 		document.getElementById("short_break").style.backgroundColor = 'transparent';
 		document.getElementById("work").style.backgroundColor = 'transparent';
+		document.getElementById("work").style.boxShadow = '7.5px 7.5px 0px #202020';
+		document.getElementById("short_break").style.boxShadow = '7.5px 7.5px 0px #202020';
+		document.getElementById("long_break").style.boxShadow = '4px 4px 0px #202020';
+		document.getElementById("work").style.transform = 'translate3d(0px, 0px, 0)';
+		document.getElementById("short_break").style.transform = 'translate3d(0px, 0px, 0)';
+		document.getElementById("long_break").style.transform = 'translate3d(3.5px, 3.5px, 0)';
 	}
 }
 
@@ -282,7 +299,6 @@ function showThemes() {
 function showSettings() {
 	var x = document.getElementById("settingsDropdown");
 	if (x.style.visibility == "visible") {
-		document.getElementById("settingsButton").style.backgroundColor = 'transparent';
 		document.getElementById("settings-icon").style.color = 'var(--iconColor)';
 	  	x.style.visibility = "hidden";
 	} else {
@@ -328,10 +344,10 @@ function showThemes() {
 	}
 }
 
+
 function updateThemeColor() {
 	localStorage.setItem("themeColorLocalStorage", getComputedStyle(document.documentElement).getPropertyValue('--themeColor'));
 	document.getElementById("palette-icon").style.color = 'var(--themeColor)';
-	document.getElementById("settings-icon").style.color = 'var(--themeColor)';
 	document.getElementById("wave").style.color = 'var(--themeColor)';
 }
 

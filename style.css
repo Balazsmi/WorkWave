@@ -60,9 +60,9 @@ display:none;
     position: inherit;
     border-style: none;
     background-color: transparent;
-    border-radius: 25px;
-    height: 80px;
-    width: 80px;
+    border-radius: 15px;
+    height: 50px;
+    width: 50px;
 }
 
 #play-icon2 {
@@ -75,9 +75,9 @@ display:none;
     position: absolute;
     border-style: none;
     background-color: transparent;
-    border-radius: 25px;
-    height: 80px;
-    width: 80px;
+    border-radius: 15px;
+    height: 50px;
+    width: 50px;
 }
 
 
@@ -119,6 +119,7 @@ display:none;
     align-items: center;
     justify-content: center;
     margin-left: 10px;
+    
 }
 
 #settingsButton {
@@ -126,9 +127,13 @@ display:none;
     position: inherit;
     border-style: none;
     background-color: transparent;
-    border-radius: 25px;
-    height: 80px;
-    width: 80px;
+    border-radius: 15px;
+    height: 50px;
+    width: 50px;
+}
+
+#settingsButton:hover {
+    color: var(--white) !important;
 }
 
 
@@ -180,11 +185,10 @@ display:none;
     position: absolute;
     left: calc(50% - 250px);
     top: 5em;
-    height: 60px;
+    height: 75px;
     width: 500px;
     border-radius: 25px;
     border-style: none;
-    background-color: var(--background2);
     margin: 0 auto;
 }
 
@@ -199,16 +203,13 @@ display:none;
     width: 140px;
     height: 50px;
     position: inherit;
-    left: calc(20% - 70px);
+    left: calc(10% - 70px);
 }
 
 #work:hover {
     color: var(--white) !important;
 }
 
-#work:active, #short_break:active, #long_break:active, #playButton:active, #reload:active, #settings:active{
-    background-color: var(--dark-gray);
-}
 
 
 #short_break {
@@ -241,10 +242,16 @@ display:none;
     height: 50px;
     width: 140px;
     position: inherit;
-    left: calc(80% - 70px);
+    left: calc(90% - 70px);
 }
 #long_break:hover {
     color: var(--white) !important;
+}
+
+
+#work, #long_break, #short_break {
+    box-shadow: 7.5px 7.5px 10px #202020;
+    background-color: #353535 !important;
 }
 
 #themes {
@@ -261,6 +268,7 @@ display:none;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px #202020;
 }
 
 
@@ -280,7 +288,7 @@ display:none;
 
 
 .fa-palette:hover {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 #dropDownButton {
@@ -303,7 +311,7 @@ display:none;
 }
 
 .fa-droplet:hover {
-    scale: 2.4;
+    scale: 2.4 !important;
 }
 
 
@@ -316,6 +324,7 @@ display:none;
     border-radius: 25px;
     border-style: none;
     background-color: var(--background2);
+    box-shadow: 7.5px 7.5px #202020;
 }
 
 #workSettings {
@@ -417,12 +426,19 @@ option {
     cursor: pointer;
 }
 
-#palette-icon:focus, #workInput:focus, #shortBreakInput:focus, #longBreakInput:focus {
+#workInput:focus, #shortBreakInput:focus, #longBreakInput:focus {
     color: var(--white);
 }
 
 #palette-icon:hover {
     color: var(--white) !important;
+}
+
+
+
+#palette-icon {
+    bottom: 30px;
+    right: 30px;
 }
 
 button:hover {
@@ -554,3 +570,4 @@ button:hover {
         top: 310px;
     }
 }
+
