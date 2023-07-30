@@ -265,17 +265,15 @@ display:none;
 
 #themes {
     position: absolute;
-    right: 80px;
-    bottom: 20px;
-    height: 50px;
-    width: fit-content;
     border-radius: 15px;
     border-style: none;
     background-color: var(--background2);
     margin: 0 auto;
     visibility: hidden;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    right: 22.5px;
+    bottom: 80px;
     align-items: center;
     box-shadow: 5px 5px #202020;
 }
@@ -290,11 +288,13 @@ display:none;
 
 .fa-palette {
     position: absolute;
-    right: 30px;
-    bottom: 30px;
     cursor: pointer;
+    margin-bottom: 5px;
+    margin-right: 5px;
 }
-
+.fa-gear:hover {
+    color: var(--white) !important;
+}
 
 .fa-palette:hover {
     color: var(--white) !important;
@@ -386,10 +386,6 @@ option {
     color: var(--white);
 }
 
-#palette-icon:hover {
-    color: var(--white) !important;
-}
-
 
 
 #palette-icon {
@@ -441,7 +437,7 @@ button:hover {
 
 
 
-@media (max-width: 530px) {
+@media (max-width: 620px) {
     .header {
         flex-direction: column;
         width: 200px;
@@ -463,3 +459,4 @@ button:hover {
         font-size: 25px;
     }
 }
+
