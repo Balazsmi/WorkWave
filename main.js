@@ -286,15 +286,6 @@ function longBreak() {
 
 
 
-function showThemes() {
-	var x = document.getElementById("themes");
-	if (x.style.visibility == "visible") {
-
-	  	x.style.visibility = "hidden";
-	} else {
-	  	x.style.visibility = "visible";
-	}
-}
 
 function showSettings() {
 	var x = document.getElementById("settingsDropdown");
