@@ -329,15 +329,26 @@ display:none;
     position: absolute;
     height: 300px;
     width: 300px;
-    top: 600px;
+    top: 550px;
     border-radius: 25px;
     border-style: none;
     background-color: var(--background2);
     box-shadow: 7.5px 7.5px #202020;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#workSettings {
-    position: inherit;
+#input-div-work, #input-div-shortBreak, #input-div-longBreak {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+#workSettings,#shortBreakSettings, #longBreakSettings {
     font-size: 20px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
@@ -346,42 +357,10 @@ display:none;
     border-radius: 15px;
     height: 50px;
     width: 140px;
-    margin-left: 50px;
-    margin-top: 40px;
     cursor: default;
 }
 
-#shortBreakSettings {
-    position: inherit;
-    font-size: 20px;
-    top: 60px;
-    font-family: 'Varela Round', sans-serif;
-    border-style: none;
-    background-color: transparent;
-    color: var(--font);
-    border-radius: 15px;
-    height: 50px;
-    width: 140px;
-    margin-left: 20px;
-    margin-top: 70px;
-    cursor: default;
-}
 
-#longBreakSettings {
-    position: inherit;
-    font-size: 20px;
-    top: 80px;
-    font-family: 'Varela Round', sans-serif;
-    border-style: none;
-    background-color: transparent;
-    color: var(--font);
-    border-radius: 15px;
-    height: 50px;
-    width: 140px;
-    margin-left: 20px;
-    margin-top: 140px;
-    cursor: default;
-}
 
 option {
     border-style: none;
@@ -390,8 +369,8 @@ option {
 }
 
 
-#workInput {
-    background-color: var(--background2);
+#workInput, #shortBreakInput, #longBreakInput {
+    background-color:#2d2d2d;
     border-style: none;
     border-radius: 17px;
     color: var(--font);
@@ -399,40 +378,8 @@ option {
     width: 80px;
     font-size: 30px;
     font-family: 'Varela Round', sans-serif;
-    position: absolute;
-    top: 25px;
-    left: 170px;
     cursor: pointer;
-}
-
-#shortBreakInput {
-    background-color: var(--background2);
-    border-style: none;
-    border-radius: 17px;
-    color: var(--font);
-    height: 50px;
-    width: 80px;
-    font-size: 30px;
-    font-family: 'Varela Round', sans-serif;
-    position: absolute;
-    top: 115px;
-    left: 170px;
-    cursor: pointer;
-}
-
-#longBreakInput {
-    background-color: var(--background2);
-    border-style: none;
-    border-radius: 17px;
-    color: var(--font);
-    height: 50px;
-    width: 80px;
-    font-size: 30px;
-    font-family: 'Varela Round', sans-serif;
-    position: absolute;
-    top: 205px;
-    left: 170px;
-    cursor: pointer;
+    margin-top: 5px !important;
 }
 
 #workInput:focus, #shortBreakInput:focus, #longBreakInput:focus {
@@ -495,33 +442,24 @@ button:hover {
 
 
 @media (max-width: 530px) {
-    .header-container {
-        display: flexbox;
-        align-items: center;
-        justify-content: center;
-    }
-    
     .header {
-        height: 200px;
+        flex-direction: column;
         width: 200px;
-        top: 20px;
+        justify-content: space-evenly;
+        height: 225px;
     }
-    #timer {
-        top: 250px;
+    #timer, .controls, #settingsButton {
+        transform: translateY(75px);
     }
-    .controls {
-        top: 400px;
+    #settingsDropdown {
+        width: 270px;
+        height: 200px;
+        transform: translateY(50px);
     }
-    #work {
-        top: 10px;
-        left: 15%;
-    }
-    #short_break {
-        top: 70px;
-        left: 15%;
-    }
-    #long_break {
-        top: 130px;
-        left: 15%;
+    #input-div-shortBreak, #input-div-longBreak {
+        margin-top: -25px;
+    } 
+    #workInput, #shortBreakInput, #longBreakInput {
+        font-size: 25px;
     }
 }
