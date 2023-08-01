@@ -16,7 +16,6 @@ let startingMinutesShortBreak = document.getElementById("shortBreakInput").value
 let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
 
 
-
 document.querySelector(':root').style.setProperty('--themeColor', localStorage.getItem("themeColorLocalStorage"));
 
 setInterval(update, 1);
@@ -289,12 +288,12 @@ function longBreak() {
 
 function showSettings() {
 	var x = document.getElementById("settingsDropdown");
-	if (x.style.visibility == "visible") {
+	if (x.style.display == "flex") {
 		document.getElementById("settings-icon").style.color = 'var(--iconColor)';
-	  	x.style.visibility = "hidden";
+	  	x.style.display = "none";
 	} else {
 		document.getElementById("settings-icon").style.color = 'var(--themeColor)';
-	  	x.style.visibility = "visible";
+	  	x.style.display = "flex";
 	}
 }
 
