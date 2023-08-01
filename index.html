@@ -59,7 +59,7 @@
 
             <div id="input-div-work">
                 <p id="workSettings">Work:</p>
-                <select id="workInput" onchange="Input()">
+                <select id="workInput" onchange="Input(), updateThemeColor()">
                     <option value="5">05</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
@@ -77,7 +77,7 @@
             
             <div id="input-div-shortBreak">
                 <p id="shortBreakSettings">Short Break:</p>
-                <select id="shortBreakInput" onchange="Input()">
+                <select id="shortBreakInput" onchange="Input(), updateThemeColor()">
                     <option value="5" selected>05</option>
                     <option value="10">10</option>
                     <option value="15">15</option>
@@ -95,7 +95,7 @@
 
             <div id="input-div-longBreak">
                 <p id="longBreakSettings">Long Break:</p>
-                <select id="longBreakInput" onchange="Input()">
+                <select id="longBreakInput" onchange="Input(), updateThemeColor()">
                     <option value="5">05</option>
                     <option value="10">10</option>
                     <option value="15" selected>15</option>

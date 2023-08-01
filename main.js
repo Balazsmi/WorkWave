@@ -11,12 +11,18 @@ let counter = 0;
 let speed = 1000;
 let audio = new Audio('sounds/sound.wav');
 let theme = 1;
-let startingMinutesWork = document.getElementById("workInput").value;
-let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
-let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
+let startingMinutesWork = localStorage.getItem("workLocalStorage");
+let startingMinutesShortBreak = localStorage.getItem("shortBreakLocalStorage");
+let startingMinutesLongBreak = localStorage.getItem("longBreakLocalStorage");
 
 
 document.querySelector(':root').style.setProperty('--themeColor', localStorage.getItem("themeColorLocalStorage"));
+
+document.querySelector('#workInput').value = localStorage.getItem("workLocalStorage");
+document.querySelector('#shortBreakInput').value = localStorage.getItem("shortBreakLocalStorage");
+document.querySelector('#longBreakInput').value = localStorage.getItem("longBreakLocalStorage");
+
+playVisibility();
 
 setInterval(update, 1);
 function update() {
@@ -307,21 +313,6 @@ function Input() {
 }
 
 
-function lightmode() {
-	document.body.style.backgroundColor = 'white';
-	document.getElementById("light-mode-icon").style.visibility = 'hidden';
-	document.getElementById("dark-mode-icon").style.visibility = 'visible';
-	document.querySelector(':root').style.setProperty('--background2', '#dddddd');
-	document.querySelector(':root').style.setProperty('--white', '#b2b2b2');
-}
-
-function darkmode() {
-	document.body.style.backgroundColor = '#202020';
-	document.getElementById("dark-mode-icon").style.visibility = 'hidden';
-	document.getElementById("light-mode-icon").style.visibility = 'visible';
-	document.querySelector(':root').style.setProperty('--background2', '#2b2b2b');
-}
-
 function showThemes() {
 	var x = document.getElementById("themes");
 	if (x.style.visibility == "visible") {
@@ -339,5 +330,10 @@ function updateThemeColor() {
 	localStorage.setItem("themeColorLocalStorage", getComputedStyle(document.documentElement).getPropertyValue('--themeColor'));
 	document.getElementById("palette-icon").style.color = 'var(--themeColor)';
 	document.getElementById("wave").style.color = 'var(--themeColor)';
+
+	localStorage.setItem("workLocalStorage",  document.getElementById("workInput").value);
+	localStorage.setItem("shortBreakLocalStorage", document.getElementById("shortBreakInput").value);
+	localStorage.setItem("longBreakLocalStorage", document.getElementById("longBreakInput").value);
+
 }
 

@@ -156,6 +156,7 @@ display:none;
     border-radius: 25px;
     border-style: none;
     position: absolute;
+    color: var(--white);
 }
 
 #timer-container {
