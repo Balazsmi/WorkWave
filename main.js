@@ -11,22 +11,15 @@ let counter = 0;
 let speed = 1000;
 let audio = new Audio('sounds/sound.wav');
 let theme = 1;
-let startingMinutesWork = localStorage.getItem("workLocalStorage");
-let startingMinutesShortBreak = localStorage.getItem("shortBreakLocalStorage");
-let startingMinutesLongBreak = localStorage.getItem("longBreakLocalStorage");
+let startingMinutesWork = document.getElementById("workInput").value;
+let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
+let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
 
 
 document.querySelector(':root').style.setProperty('--themeColor', localStorage.getItem("themeColorLocalStorage"));
 
-document.querySelector('#workInput').value = localStorage.getItem("workLocalStorage");
-document.querySelector('#shortBreakInput').value = localStorage.getItem("shortBreakLocalStorage");
-document.querySelector('#longBreakInput').value = localStorage.getItem("longBreakLocalStorage");
-
-playVisibility();
-
 setInterval(update, 1);
 function update() {
-
 	if (state == 1) {
 		document.getElementById("work").style.color = 'var(--themeColor)';
 		document.getElementById("minutes").style.color = 'var(--themeColor)';
@@ -34,15 +27,9 @@ function update() {
 		document.getElementById("seconds").style.color = 'var(--themeColor)';
 		document.getElementById("short_break").style.color = 'var(--font)';
 		document.getElementById("long_break").style.color = 'var(--font)';
-		document.getElementById("work").style.backgroundColor = 'var(--dark-gray)';
-		document.getElementById("short_break").style.backgroundColor = 'transparent';
-		document.getElementById("long_break").style.backgroundColor = 'transparent';
-		document.getElementById("work").style.boxShadow = '4px 4px 0px #202020';
-		document.getElementById("short_break").style.boxShadow = '7.5px 7.5px 0px #202020';
-		document.getElementById("long_break").style.boxShadow = '7.5px 7.5px 0px #202020';
-		document.getElementById("work").style.transform = 'translate3d(3.5px, 3.5px, 0)';
-		document.getElementById("short_break").style.transform = 'translate3d(0px, 0px, 0)';
-		document.getElementById("long_break").style.transform = 'translate3d(0px, 0px, 0)';
+		document.getElementById("work").style.fontSize = '23px';
+		document.getElementById("short_break").style.fontSize = '20px';
+		document.getElementById("long_break").style.fontSize = '20px';
 	} else if (state == 2) {
 		document.getElementById("short_break").style.color = 'var(--themeColor)';
 		document.getElementById("minutes").style.color = 'var(--themeColor)';
@@ -50,15 +37,9 @@ function update() {
 		document.getElementById("seconds").style.color = 'var(--themeColor)';
 		document.getElementById("work").style.color = 'var(--font)';
 		document.getElementById("long_break").style.color = 'var(--font)';
-		document.getElementById("short_break").style.backgroundColor = 'var(--dark-gray)';
-		document.getElementById("work").style.backgroundColor = 'transparent';
-		document.getElementById("long_break").style.backgroundColor = 'transparent';
-		document.getElementById("work").style.boxShadow = '7.5px 7.5px 0px #202020';
-		document.getElementById("short_break").style.boxShadow = '4px 4px 0px #202020';
-		document.getElementById("long_break").style.boxShadow = '7.5px 7.5px 0px #202020';
-		document.getElementById("work").style.transform = 'translate3d(0px, 0px, 0)';
-		document.getElementById("short_break").style.transform = 'translate3d(3.5px, 3.5px, 0)';
-		document.getElementById("long_break").style.transform = 'translate3d(0px, 0px, 0)';
+		document.getElementById("work").style.fontSize = '20px';
+		document.getElementById("short_break").style.fontSize = '23px';
+		document.getElementById("long_break").style.fontSize = '20px';
 	} else if (state == 3) {
 		document.getElementById("long_break").style.color = 'var(--themeColor)';
 		document.getElementById("minutes").style.color = 'var(--themeColor)';
@@ -66,15 +47,9 @@ function update() {
 		document.getElementById("seconds").style.color = 'var(--themeColor)';
 		document.getElementById("short_break").style.color = 'var(--font)';
 		document.getElementById("work").style.color = 'var(--font)';
-		document.getElementById("long_break").style.backgroundColor = 'var(--dark-gray)';
-		document.getElementById("short_break").style.backgroundColor = 'transparent';
-		document.getElementById("work").style.backgroundColor = 'transparent';
-		document.getElementById("work").style.boxShadow = '7.5px 7.5px 0px #202020';
-		document.getElementById("short_break").style.boxShadow = '7.5px 7.5px 0px #202020';
-		document.getElementById("long_break").style.boxShadow = '4px 4px 0px #202020';
-		document.getElementById("work").style.transform = 'translate3d(0px, 0px, 0)';
-		document.getElementById("short_break").style.transform = 'translate3d(0px, 0px, 0)';
-		document.getElementById("long_break").style.transform = 'translate3d(3.5px, 3.5px, 0)';
+		document.getElementById("work").style.fontSize = '20px';
+		document.getElementById("short_break").style.fontSize = '20px';
+		document.getElementById("long_break").style.fontSize = '23px';
 	}
 }
 
@@ -295,7 +270,7 @@ function longBreak() {
 function showSettings() {
 	var x = document.getElementById("settingsDropdown");
 	if (x.style.display == "flex") {
-		document.getElementById("settings-icon").style.color = 'var(--iconColor)';
+		document.getElementById("settings-icon").style.color = 'var(--icon)';
 	  	x.style.display = "none";
 	} else {
 		document.getElementById("settings-icon").style.color = 'var(--themeColor)';
@@ -316,7 +291,7 @@ function Input() {
 function showThemes() {
 	var x = document.getElementById("themes");
 	if (x.style.visibility == "visible") {
-		document.getElementById("palette-icon").style.color = 'var(--iconColor)';
+		document.getElementById("palette-icon").style.color = 'var(--icon)';
 	  	x.style.visibility = "hidden";
 	} else {
 		document.getElementById("palette-icon").style.color = 'var(--themeColor)';
@@ -330,10 +305,4 @@ function updateThemeColor() {
 	localStorage.setItem("themeColorLocalStorage", getComputedStyle(document.documentElement).getPropertyValue('--themeColor'));
 	document.getElementById("palette-icon").style.color = 'var(--themeColor)';
 	document.getElementById("wave").style.color = 'var(--themeColor)';
-
-	localStorage.setItem("workLocalStorage",  document.getElementById("workInput").value);
-	localStorage.setItem("shortBreakLocalStorage", document.getElementById("shortBreakInput").value);
-	localStorage.setItem("longBreakLocalStorage", document.getElementById("longBreakInput").value);
-
 }
-

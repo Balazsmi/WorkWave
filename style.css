@@ -1,5 +1,6 @@
 body {
-    background-color: var(--dark-gray);
+    background-color: var(--background);
+    font-family: 'Rubik', sans-serif;
 }
 img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]
 {
@@ -7,30 +8,28 @@ display:none;
 }
 
 :root {
-    --dark-gray: #313131;
-    --white: #f5e6c8;
-    --gray: #202020;
-    --hover: rgba(31, 31, 31, 0.527);
-    --background1: var(--font);
-    --background2: #2b2b2b;
-    --iconColor: #616161;
-    --font: #5e5e5e;
+    --background: #161616;
+    --white: #ffffff;
+    --beige: #f5e6c8;
+    --gray: #262626;
+    --icon: #616161;
+    --font: #4e4e4e;
     --purple: #c134dd;
     --blue: #2b8ecf;
     --orange:#fd8945;
-    --themeColor: #00d062;
     --yellow:#ffd843;
     --red:  #ff4c4c;
     --green: #00d062;
+    --themeColor: #ffffff;
 }
 
 .fa-solid {
     scale: 2;
-    color: var(--iconColor);
+    color: var(--icon);
 }
 
 .fa-play:hover, .fa-gear:hover, .fa-rotate-left:hover {
-    color: var(--white);
+    color: var(--beige);
 }
 
 #wave {
@@ -41,7 +40,7 @@ display:none;
 #title {
     font-size: 30px;
     margin-left: 25px;
-    color: var(--white);
+    color: var(--beige);
 }
 
 #heading {
@@ -64,6 +63,7 @@ display:none;
     height: 50px;
     width: 50px;
 }
+
 
 #play-icon2 {
     height: 150px;
@@ -108,6 +108,11 @@ display:none;
     margin-right: 10px;
 }
 
+button:hover {
+    cursor: pointer;
+    color: var(--beige);
+}
+
 #settings {
     display: flex;
     height: 100px;
@@ -123,7 +128,7 @@ display:none;
 }
 
 #settings-icon:hover {
-    color: var(--white);
+    color: var(--beige);
 }
 
 #settingsButton {
@@ -137,7 +142,7 @@ display:none;
 }
 
 #settingsButton:hover {
-    color: var(--white);
+    color: var(--beige);
 }
 
 
@@ -156,7 +161,7 @@ display:none;
     border-radius: 25px;
     border-style: none;
     position: absolute;
-    color: var(--white);
+    color: var(--beige);
 }
 
 #timer-container {
@@ -166,27 +171,24 @@ display:none;
 }
 
 #minutes {
-    color: var(--white);
+    color: var(--beige);
     font-size: 100px;
-    font-family: 'Varela Round', sans-serif;
-    width: 140px;
+    width: 150px;
     height: 90px;
     text-align: center;
 }
 
 #seconds {
-    color: var(--white);
+    color: var(--beige);
     font-size: 100px;
-    font-family: 'Varela Round', sans-serif;
     width: 140px;
     height: 90px;
     text-align: center;
 }
 
 #doppelpunkt {
-    color: var(--white);
+    color: var(--beige);
     font-size: 100px;
-    font-family: 'Varela Round', sans-serif;
     width: 40px;
     height: 90px;
     text-align: center;
@@ -213,70 +215,55 @@ display:none;
 }
 #work {
     font-size: 20px;
-    font-family: 'Varela Round', sans-serif;
     border-style: none;
-    background-color: transparent;
     color: var(--font);
     border-radius: 15px;
     width: 140px;
     height: 50px;
 }
-
-#work:hover {
-    color: var(--white) !important;
-}
-
 
 
 #short_break {
     font-size: 20px;
-    font-family: 'Varela Round', sans-serif;
     border-style: none;
-    background-color: transparent;
     color: var(--font);
     border-radius: 15px;
     height: 50px;
     width: 140px;
-}
-
-
-#short_break:hover {
-    color: var(--white) !important;
 }
 
 #long_break {
     font-size: 20px;
     font-family: 'Varela Round', sans-serif;
     border-style: none;
-    background-color: transparent;
     color: var(--font);
     border-radius: 15px;
     height: 50px;
     width: 140px;
 }
-#long_break:hover {
-    color: var(--white) !important;
-}
 
 
 #work, #long_break, #short_break {
-    box-shadow: 7.5px 7.5px 10px #202020;
-    background-color: #353535 !important;
+    background-color: transparent !important;
+    font-size: 23px;
+}
+
+#work:hover, #long_break:hover, #short_break:hover {
+    color: var(--beige) !important;
 }
 
 #themes {
     position: absolute;
     border-radius: 15px;
     border-style: none;
-    background-color: var(--background2);
+    background-color: var(--gray);
     margin: 0 auto;
     visibility: hidden;
     display: flex;
-    flex-direction: column;
-    right: 22.5px;
-    bottom: 85px;
+    flex-direction: row;
+    right: 85px;
+    bottom: 15px;
     align-items: center;
-    box-shadow: 5px 5px #202020;
 }
 
 
@@ -294,16 +281,15 @@ display:none;
     margin-right: 5px;
 }
 .fa-gear:hover {
-    color: var(--white) !important;
+    color: var(--beige) !important;
 }
 
 .fa-palette:hover {
-    color: var(--white) !important;
+    color: var(--beige) !important;
 }
 
 #dropDownButton {
     font-size: 20px;
-    font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
     color: var(--font);
@@ -324,16 +310,14 @@ display:none;
     scale: 2.4 !important;
 }
 
-
 #settingsDropdown {
     position: absolute;
     height: 300px;
     width: 300px;
-    top: 550px;
+    top: 510px;
     border-radius: 25px;
     border-style: none;
-    background-color: var(--background2);
-    box-shadow: 7.5px 7.5px #202020;
+    background-color: transparent;
     display: none;
     flex-direction: column;
     justify-content: space-evenly;
@@ -350,7 +334,6 @@ display:none;
 
 #workSettings,#shortBreakSettings, #longBreakSettings {
     font-size: 20px;
-    font-family: 'Varela Round', sans-serif;
     border-style: none;
     background-color: transparent;
     color: var(--font);
@@ -365,25 +348,24 @@ display:none;
 option {
     border-style: none;
     font-size: 30px;
-    font-family: 'Varela Round', sans-serif;
 }
 
 
 #workInput, #shortBreakInput, #longBreakInput {
-    background-color:#2d2d2d;
+    background-color: transparent;
     border-style: none;
     border-radius: 17px;
     color: var(--font);
     height: 50px;
     width: 80px;
     font-size: 30px;
-    font-family: 'Varela Round', sans-serif;
     cursor: pointer;
     margin-top: 5px !important;
 }
 
 #workInput:focus, #shortBreakInput:focus, #longBreakInput:focus {
     color: var(--white);
+    background-color: var(--background);
 }
 
 
@@ -393,10 +375,6 @@ option {
     right: 30px;
 }
 
-button:hover {
-    cursor: pointer;
-    background-color: var(--hover);
-}
 
 ::selection {
     background: transparent;
@@ -405,7 +383,7 @@ button:hover {
 
 #modeDiv {
     height: 50px;
-    background-color: var(--background2);
+    background-color: var(--gray);
     width: 50px;
     border-radius: 15px;
     position: absolute;
@@ -418,7 +396,6 @@ button:hover {
 
 
 #github {
-    font-family: 'Jetbrains Mono';
     font-weight: bolder;
     height: 20px;
     position: absolute;
@@ -431,13 +408,13 @@ button:hover {
 }
 
 #github:hover {
-    color: var(--white);
+    color: var(--beige);
     text-decoration: underline;
 }
 
 
 select:hover {
-    color: var(--white);
+    color: var(--beige);
 }
 
 
@@ -454,7 +431,7 @@ select:hover {
     }
     #settingsDropdown {
         width: 270px;
-        height: 200px;
+        height: 250px;
         transform: translateY(50px);
     }
     #input-div-shortBreak, #input-div-longBreak {
@@ -462,6 +439,20 @@ select:hover {
     } 
     #workInput, #shortBreakInput, #longBreakInput {
         font-size: 25px;
+    }
+    #themes {
+        position: absolute;
+        border-radius: 15px;
+        border-style: none;
+        background-color: var(--gray);
+        margin: 0 auto;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        right: 18px;
+        bottom: 85px;
+        align-items: center;
     }
 }
 
