@@ -93,7 +93,7 @@ display:none;
     height: 100px;
     display: flex;
     justify-content: center;
-    margin-top: 400px;
+    margin-top: 325px;
 }
 
 .controls {
@@ -155,7 +155,7 @@ button:hover {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    top: 16em;
+    top: 12em;
     height: 120px;
     width: 300px;
     border-radius: 25px;
@@ -315,9 +315,9 @@ button:hover {
 
 #settingsDropdown {
     position: absolute;
-    height: 300px;
+    height: 225px;
     width: 300px;
-    top: 510px;
+    top: 440px;
     border-radius: 25px;
     border-style: none;
     background-color: transparent;
@@ -435,12 +435,12 @@ select:hover {
         height: 225px;
     }
     #timer, .controls, #settingsButton {
-        transform: translateY(75px);
+        transform: translateY(135px);
     }
     #settingsDropdown {
         width: 270px;
         height: 250px;
-        transform: translateY(50px);
+        transform: translateY(100px);
     }
     #input-div-shortBreak, #input-div-longBreak {
         margin-top: -25px;
