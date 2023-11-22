@@ -11,13 +11,14 @@ let counter = 0;
 let speed = 1000;
 let audio = new Audio('sounds/sound.wav');
 let theme = 1;
-let startingMinutesWork = document.getElementById("workInput").value;
-let startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
-let startingMinutesLongBreak = document.getElementById("longBreakInput").value;
+let startingMinutesWork = localStorage.getItem("workDuration");
+let startingMinutesShortBreak = localStorage.getItem("shortBreakDuration");
+let startingMinutesLongBreak = localStorage.getItem("longBreakDuration");
 
 
 document.querySelector(':root').style.setProperty('--themeColor', localStorage.getItem("themeColorLocalStorage"));
-
+retreiveDurations();
+playVisibility();
 setInterval(update, 1);
 function update() {
 	if (state == 1) {
@@ -55,9 +56,9 @@ function update() {
 
 //play-button turns into pause button, when it's clicked
 function playVisibility() {
-	startingMinutesWork = document.getElementById("workInput").value;
-	startingMinutesShortBreak = document.getElementById("shortBreakInput").value;
-	startingMinutesLongBreak = document.getElementById("longBreakInput").value;
+	startingMinutesWork = localStorage.getItem("workDuration");
+	startingMinutesShortBreak = localStorage.getItem("shortBreakDuration");
+	startingMinutesLongBreak = localStorage.getItem("longBreakDuration");
 	if (startingMinutesWork < 10) {
 		startingMinutesWork = '0' + startingMinutesWork;
 	}
@@ -80,7 +81,6 @@ function playVisibility() {
 		document.querySelector("#seconds").innerHTML = '00';
 	}
 }
-
 
 
 //sets the correct timer duration
@@ -180,9 +180,6 @@ function work() {
 	}
 }
 
-
-
-
 function shortBreak() {
 	startingMinutes = startingMinutesShortBreak;
 
@@ -222,7 +219,6 @@ function shortBreak() {
 		}
 	}
 }
-
 
 function longBreak() {
 	startingMinutes = startingMinutesLongBreak;
@@ -305,4 +301,29 @@ function updateThemeColor() {
 	localStorage.setItem("themeColorLocalStorage", getComputedStyle(document.documentElement).getPropertyValue('--themeColor'));
 	document.getElementById("palette-icon").style.color = 'var(--themeColor)';
 	document.getElementById("wave").style.color = 'var(--themeColor)';
+}
+
+
+function localStorageDurations() {
+	localStorage.setItem("workDuration", document.getElementById("workInput").value);
+	localStorage.setItem("shortBreakDuration", document.getElementById("shortBreakInput").value);
+	localStorage.setItem("longBreakDuration", document.getElementById("longBreakInput").value);
+	playVisibility();
+
+}
+
+function retreiveDurations() {
+	if(localStorage.getItem("workDuration")) {
+		document.getElementById("workInput").value = localStorage.getItem("workDuration");
+		document.getElementById("shortBreakInput").value = localStorage.getItem("shortBreakDuration");
+		document.getElementById("longBreakInput").value = localStorage.getItem("longBreakDuration");
+	} else {
+		document.getElementById("workInput").value = 25;
+		document.getElementById("shortBreakInput").value = 5;
+		document.getElementById("longBreakInput").value = 15;
+		localStorage.setItem("workDuration", 25);
+		localStorage.setItem("shortBreakDuration", 5);
+		localStorage.setItem("longBreakDuration", 15);
+	}
+	playVisibility();
 }

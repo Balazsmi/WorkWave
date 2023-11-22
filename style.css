@@ -10,7 +10,6 @@ display:none;
 :root {
     --background: #161616;
     --white: #ffffff;
-    --beige: #f5e6c8;
     --gray: #262626;
     --icon: #616161;
     --font: #4e4e4e;
@@ -29,7 +28,7 @@ display:none;
 }
 
 .fa-play:hover, .fa-gear:hover, .fa-rotate-left:hover {
-    color: var(--beige);
+    color: var(--white);
 }
 
 #wave {
@@ -40,7 +39,7 @@ display:none;
 #title {
     font-size: 30px;
     margin-left: 25px;
-    color: var(--beige);
+    color: var(--white);
 }
 
 #heading {
@@ -110,7 +109,7 @@ display:none;
 
 button:hover {
     cursor: pointer;
-    color: var(--beige);
+    color: var(--white);
 }
 
 #settings {
@@ -128,7 +127,7 @@ button:hover {
 }
 
 #settings-icon:hover {
-    color: var(--beige);
+    color: var(--white);
 }
 
 #settingsButton {
@@ -142,7 +141,7 @@ button:hover {
 }
 
 #settingsButton:hover {
-    color: var(--beige);
+    color: var(--white);
 }
 
 
@@ -161,7 +160,7 @@ button:hover {
     border-radius: 25px;
     border-style: none;
     position: absolute;
-    color: var(--beige);
+    color: var(--white);
 }
 
 #timer-container {
@@ -171,7 +170,7 @@ button:hover {
 }
 
 #minutes {
-    color: var(--beige);
+    color: var(--white);
     font-size: 100px;
     width: 150px;
     height: 90px;
@@ -179,7 +178,7 @@ button:hover {
 }
 
 #seconds {
-    color: var(--beige);
+    color: var(--white);
     font-size: 100px;
     width: 140px;
     height: 90px;
@@ -187,7 +186,7 @@ button:hover {
 }
 
 #doppelpunkt {
-    color: var(--beige);
+    color: var(--white);
     font-size: 100px;
     width: 40px;
     height: 90px;
@@ -249,7 +248,7 @@ button:hover {
 }
 
 #work:hover, #long_break:hover, #short_break:hover {
-    color: var(--beige) !important;
+    color: var(--white) !important;
 }
 
 #themes {
@@ -281,11 +280,11 @@ button:hover {
     margin-right: 5px;
 }
 .fa-gear:hover {
-    color: var(--beige) !important;
+    color: var(--white) !important;
 }
 
 .fa-palette:hover {
-    color: var(--beige) !important;
+    color: var(--white) !important;
 }
 
 #dropDownButton {
@@ -408,13 +407,13 @@ option {
 }
 
 #github:hover {
-    color: var(--beige);
+    color: var(--white);
     text-decoration: underline;
 }
 
 
 select:hover {
-    color: var(--beige);
+    color: var(--white);
 }
 
 
