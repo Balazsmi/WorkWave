@@ -259,7 +259,7 @@ button:hover {
     position: absolute;
     border-radius: 15px;
     border-style: none;
-    background-color: var(--gray);
+    background-color: transparent;
     margin: 0 auto;
     visibility: hidden;
     display: flex;
