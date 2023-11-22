@@ -403,7 +403,6 @@ option {
 
 
 #github {
-    font-weight: bolder;
     height: 20px;
     position: absolute;
     margin-left: 20px;
@@ -412,6 +411,8 @@ option {
     cursor: pointer;
     font-size: 17.5px;
     text-decoration: none;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
 }
 
 #github:hover {
