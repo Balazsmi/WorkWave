@@ -1,0 +1,17 @@
+{
+    "name": "Workwave",
+    "short_name": "Workwave",
+    "description": "simple pomodoro timer",
+    "start_url": "/",
+    "display": "fullscreen",
+    "background_color": "#161616",
+    "theme_color": "#161616",
+    "icons": [
+      {
+        "src": "/img/icon.png",
+        "sizes": "352x352",
+        "type": "image/png"
+      }
+    ]
+  }
+  
