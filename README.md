@@ -1,6 +1,6 @@
 # WorkWave
 
-![ipad-pro-mockup (1)](https://github.com/Balazsmi/WorkWave/assets/81588599/7a970bcd-4840-474a-ab72-c2eaec1cd9b2)
+  <img src="https://github.com/Balazsmi/WorkWave/assets/81588599/d7a1e2b4-0bda-4419-98a3-e12fb6ae131f" width="700">
 
 This website is a simple Pomodoro Timer that helps you manage your time efficiently by breaking down your work into 25-minute intervals, separated by short breaks.
 
