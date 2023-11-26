@@ -245,14 +245,22 @@ button:hover {
     width: 140px;
 }
 
-
 #work, #long_break, #short_break {
     background-color: transparent !important;
     font-size: 23px;
+    white-space: nowrap !important;
 }
 
 #work:hover, #long_break:hover, #short_break:hover {
     color: var(--hover) !important;
+}
+
+#work:focus, #long_break:focus, #short_break:focus {
+    color: var(--themeColor) !important;
+}
+
+#work.clicked, #long_break.clicked, #short_break.clicked {
+    color: var(--themeColor) !important;
 }
 
 #themes {
@@ -268,8 +276,6 @@ button:hover {
     bottom: 15px;
     align-items: center;
 }
-
-
 
 .themeIcon {
     height: 50px;
@@ -429,18 +435,22 @@ select:hover {
 
 @media (max-width: 620px) {
     .header {
-        flex-direction: column;
-        width: 200px;
+        flex-direction: row;
+        width: 85%;
         justify-content: space-evenly;
-        height: 225px;
+        height: 100px;
     }
     #timer, .controls, #settingsButton {
-        transform: translateY(135px);
+        transform: translateY(10px);
+    }
+
+    .controls, #settingsButton {
+        transform: translateY(-25px);
     }
     #settingsDropdown {
         width: 270px;
         height: 250px;
-        transform: translateY(100px);
+        transform: translateY(-50px);
     }
     #input-div-shortBreak, #input-div-longBreak {
         margin-top: -25px;
@@ -452,18 +462,55 @@ select:hover {
         position: absolute;
         border-radius: 15px;
         border-style: none;
-        background-color: var(--gray);
+        background-color: transparent;
         margin: 0 auto;
         visibility: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
-        right: 18px;
-        bottom: 85px;
+        right: 22.5px;
+        bottom: 90px;
         align-items: center;
+        height: 300px;
     }
     #long_break, #short_break, #work {
         width: 250px;
     }
+    .fa-droplet {
+        scale: 1.6;
+        margin: 15px;
+    }
 }
 
+@media (max-height: 730px) {
+    .controls, #settingsButton {
+        transform: translateY(10px);
+    }
+
+    .controls, #settingsButton {
+        transform: translateY(-25px);
+    }
+    #settingsDropdown {
+        width: 270px;
+        height: 250px;
+        transform: translateY(-50px);
+    }
+    #input-div-shortBreak, #input-div-longBreak {
+        margin-top: -25px;
+    } 
+    #workInput, #shortBreakInput, #longBreakInput {
+        font-size: 25px;
+    }
+}
+
+@media (max-height: 670px) {
+    #timer {
+        transform: translateY(-40px);
+    }
+    .controls, #settingsButton {
+        transform: translateY(-100px);
+    }
+    #settingsDropdown {
+        transform: translateY(-130px);
+    }
+}

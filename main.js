@@ -20,6 +20,7 @@ document.querySelector(':root').style.setProperty('--themeColor', localStorage.g
 retreiveDurations();
 playVisibility();
 setInterval(update, 1);
+
 function update() {
 	if (state == 1) {
 		document.getElementById("work").style.color = 'var(--themeColor)';
@@ -89,9 +90,6 @@ function setWork() {
         startingMinutes = document.getElementById("workInput").value;
         (startingMinutes < 10) ? document.querySelector("#minutes").innerHTML = '0' + startingMinutes : document.querySelector("#minutes").innerHTML = startingMinutes;
         document.querySelector("#seconds").innerHTML = '00';
-        
-    } else {
-        return;
     }
 }
 
@@ -100,9 +98,6 @@ function setShortBreak() {
         startingMinutes = document.getElementById("shortBreakInput").value;
         (startingMinutes < 10) ? document.querySelector("#minutes").innerHTML = '0' + startingMinutes : document.querySelector("#minutes").innerHTML = startingMinutes;
         document.querySelector("#seconds").innerHTML = '00';
-        
-    } else {
-        return;
     }
 }
 
@@ -111,9 +106,6 @@ function setLongBreak() {
         startingMinutes = document.getElementById("longBreakInput").value;
         (startingMinutes < 10) ? document.querySelector("#minutes").innerHTML = '0' + startingMinutes : document.querySelector("#minutes").innerHTML = startingMinutes;
         document.querySelector("#seconds").innerHTML = '00';
-        
-    } else {
-        return;
     }
 }
 
