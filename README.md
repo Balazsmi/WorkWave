@@ -1,4 +1,5 @@
-# WorkWave
+# [WorkWave](https://balazsmi.github.io/WorkWave/)
+
 
   <img src="https://github.com/Balazsmi/WorkWave/assets/81588599/d7a1e2b4-0bda-4419-98a3-e12fb6ae131f" width="700">
 
