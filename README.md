@@ -1,6 +1,6 @@
   <img src="https://github.com/Balazsmi/WorkWave/assets/81588599/9fe31c30-f0a4-4a51-8e97-6c5a73ed5d7e" width="100%">
 
-A simple Pomodoro Timer you can [try here](https://balazsmi.github.io/WorkWave/)
+A simple Pomodoro Timer you can try [here](https://balazsmi.github.io/WorkWave/)
 
 ## Features
 
