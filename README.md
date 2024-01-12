@@ -1,4 +1,4 @@
-  <img src="https://github.com/Balazsmi/WorkWave/assets/81588599/9fe31c30-f0a4-4a51-8e97-6c5a73ed5d7e" width="100%">
+![Screenshot 2024-01-12 220843](https://github.com/Balazsmi/WorkWave/assets/81588599/ed3291b0-ee04-4530-9133-8419856c5684)
 
 A simple pomodoro-timer you can try [here](https://balazsmi.github.io/WorkWave/)
 
